@@ -21,7 +21,8 @@ html {
  */
 
 body {
-	margin: 0;
+	width: 100%;
+	margin: 10px auto;
 }
 
 /**
@@ -197,6 +198,8 @@ button,
 [type="reset"],
 [type="submit"] {
 	-webkit-appearance: button;
+	-moz-appearance: button;
+	appearance: button;	
 }
 
 /**
@@ -289,6 +292,8 @@ textarea {
 
 [type="search"] {
 	-webkit-appearance: textfield;
+	-moz-appearance: textfield;
+	appearance: textfield;
 	outline-offset: -2px;
 }
 

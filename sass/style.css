@@ -71,7 +71,8 @@ html {
  * Remove the margin in all browsers.
  */
 body {
-  margin: 0;
+  width: 100%;
+  margin: 10px auto;
 }
 
 /**
@@ -229,6 +230,8 @@ button,
 [type=reset],
 [type=submit] {
   -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
 }
 
 /**
@@ -312,6 +315,8 @@ textarea {
  */
 [type=search] {
   -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
   outline-offset: -2px;
 }
 
@@ -458,7 +463,7 @@ big {
 /* Elements
 --------------------------------------------- */
 body {
-  background: #fff;
+  background: #fff9c0;
 }
 
 hr {
@@ -660,6 +665,7 @@ textarea {
   display: block;
   text-decoration: none;
 }
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
