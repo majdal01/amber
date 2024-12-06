@@ -63,6 +63,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
+  background-color: white;
 }
 
 /* Sections
@@ -71,7 +72,7 @@ html {
  * Remove the margin in all browsers.
  */
 body {
-  width: 1024px;
+  width: 100%;
   margin: 0px auto;
 }
 
@@ -948,7 +949,7 @@ textarea {
   text-decoration: underline;
 }
 .site-footer a:hover, .site-footer a:focus {
-  color: #F1BA82;
+  color: #4C563B;
 }
 .site-footer .site-info {
   margin: 0 auto; /* Center the content */
@@ -957,4 +958,15 @@ textarea {
 }
 .site-footer .sep {
   margin: 0 10px; /* Spacing for separator */
+}
+
+/*--------------------------------------------------------------
+/* Main area
+--------------------------------------------------------------*/
+.content-area {
+  background-color: #fff;
+}
+
+.entry-title {
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */
