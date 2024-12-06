@@ -1,18 +1,18 @@
 #colophon {
-    background-color: #333; /* Background color */
-    color: #fff; /* Text color */
+    background-color: #F0D8BE; /* Background color */
+    color: #010101; /* Text color */
     padding: 20px 0; /* Padding */
     text-align: center; /* Center align text */
 }
 
 .site-footer {
     a {
-        color: #fff; /* Link color */
-        text-decoration: none; /* Remove underline */
+        color: #010101; /* Link color */
+        text-decoration: underline; 
         
         &:hover,
         &:focus {
-            text-decoration: underline; /* Underline on hover/focus */
+            color: $color__link-hover; 
         }
     }
 
@@ -20,11 +20,9 @@
         margin: 0 auto; /* Center the content */
         max-width: 960px; /* Max width */
         padding: 0 20px; /* Padding */
-        background-color: red;
     }
 
     .sep {
         margin: 0 10px; /* Spacing for separator */
-        background-color: red;
     }
 }

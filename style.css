@@ -1,8 +1,8 @@
 /*!
 Theme Name: Amber
-Theme URI: http://underscores.me/
+Theme URI: https://amberowldesign.dk/amber
 Author: Maja Lund Dalgaard
-Author URI: http://underscores.me/
+Author URI: https://amberowldesign.dk/
 Description: My first WP custom theme
 Version: 1.0.0
 Tested up to: 5.4
@@ -10,7 +10,7 @@ Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: amber
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: responsive, creative, portfolio, gallery
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned.
@@ -49,34 +49,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-/* Footer
---------------------------------------------------------------*/
-#colophon {
-  background-color: #333; /* Background color */
-  color: #fff; /* Text color */
-  padding: 20px 0; /* Padding */
-  text-align: center; /* Center align text */
-}
-
-.site-footer a {
-  color: #fff; /* Link color */
-  text-decoration: none; /* Remove underline */
-}
-.site-footer a:hover, .site-footer a:focus {
-  text-decoration: underline; /* Underline on hover/focus */
-}
-.site-footer .site-info {
-  margin: 0 auto; /* Center the content */
-  max-width: 960px; /* Max width */
-  padding: 0 20px; /* Padding */
-  background-color: red;
-}
-.site-footer .sep {
-  margin: 0 10px; /* Spacing for separator */
-  background-color: red;
-}
-
-/*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
 /* Normalize
@@ -99,8 +71,8 @@ html {
  * Remove the margin in all browsers.
  */
 body {
-  width: 100%;
-  margin: 10px auto;
+  width: 1024px;
+  margin: 0px auto;
 }
 
 /**
@@ -116,7 +88,7 @@ main {
  */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
+  padding: 0.67em 0;
 }
 
 /* Grouping content
@@ -552,19 +524,17 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-  color: red;
+  color: #010101;
 }
 a:visited {
-  color: #800080;
+  color: #010101;
 }
 a:hover, a:focus, a:active {
-  color: #191970;
+  outline: 0;
+  text-decoration: underline;
 }
 a:focus {
   outline: thin dotted;
-}
-a:hover, a:active {
-  outline: 0;
 }
 
 /* Forms
@@ -654,18 +624,28 @@ textarea {
 /* Navigation
 --------------------------------------------- */
 .main-navigation {
-  display: block;
+  display: flex;
   width: 100%;
+  background-color: #F0D8BE;
+  justify-content: flex-end;
+}
+.main-navigation .site-logo {
+  margin-right: auto;
+}
+.main-navigation .site-logo img {
+  max-height: 50px;
+  height: auto;
+  width: auto;
 }
 .main-navigation ul {
-  display: none;
+  display: flex;
   list-style: none;
-  margin: 0;
-  padding-left: 0;
+  margin: 0 auto;
+  padding: 1em;
+  max-width: 1024px;
 }
 .main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
+  display: flex;
   position: absolute;
   top: 100%;
   left: -999em;
@@ -688,10 +668,14 @@ textarea {
 }
 .main-navigation li {
   position: relative;
+  padding-right: 2em;
 }
 .main-navigation a {
   display: block;
   text-decoration: none;
+}
+.main-navigation a:hover {
+  border-bottom: 1px solid #000;
 }
 
 /* Small menu. */
@@ -739,7 +723,6 @@ textarea {
 .post,
 .page {
   margin: 0 0 1.5em;
-  background-color: red;
 }
 
 .updated:not(.published) {
@@ -946,4 +929,32 @@ textarea {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5em;
+}
+
+/*--------------------------------------------------------------
+// Amberstyle
+/*--------------------------------------------------------------
+/* Footer
+--------------------------------------------------------------*/
+#colophon {
+  background-color: #F0D8BE; /* Background color */
+  color: #010101; /* Text color */
+  padding: 20px 0; /* Padding */
+  text-align: center; /* Center align text */
+}
+
+.site-footer a {
+  color: #010101; /* Link color */
+  text-decoration: underline;
+}
+.site-footer a:hover, .site-footer a:focus {
+  color: #F1BA82;
+}
+.site-footer .site-info {
+  margin: 0 auto; /* Center the content */
+  max-width: 960px; /* Max width */
+  padding: 0 20px; /* Padding */
+}
+.site-footer .sep {
+  margin: 0 10px; /* Spacing for separator */
 }/*# sourceMappingURL=style.css.map */

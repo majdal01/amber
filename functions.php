@@ -141,6 +141,9 @@ function amber_scripts() {
 	wp_enqueue_style( 'amber-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'amber-style', 'rtl', 'replace' );
 
+	//Adobe Fonts
+	wp_enqueue_style( 'typekit', 'https://use.typekit.net/cot6hfo.css', array(), null );
+
 	//Footer CSS
 	wp_enqueue_style( 'amber-footer-style', get_template_directory_uri() . '/css/footer.css', array(), _S_VERSION );
 
@@ -150,7 +153,7 @@ function amber_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'amber_scripts' );
+add_action( 'wp_enqueue_scripts', 'amber_scripts' ); // Når WordPress indlæser scripts og styles, så skal den bruge funktionen amber_scripts
 
 /**
  * Implement the Custom Header feature.
