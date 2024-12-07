@@ -47,27 +47,27 @@ p {
 .site-branding {
 	padding: 1em;
 	float: left;
-	vertical-align: bottom;
+
+	.site-title {
+		font-size: 1.5em;
+		font-weight: 700;
+	}
+
+	.site-title, .site-description {
+		margin: 0;
+		line-height: 1em;
+		display: inline-block;
+		vertical-align: center;
+	}
+
+	.site-description {
+		margin-left: 0.5em;
+		font-style: italic;
+		font-size: 1em;
+		margin-bottom: 0;
+	}
 }
 
-.site-title {
-    font-size: 1.5em;
-	font-weight: 700;
-}
-
-.site-title, .site-description {
-	margin: 0;
-	line-height: 1em;
-	display: inline-block;
-	vertical-align: bottom;
-}
-
-.site-description {
-	margin-left: 0.5em;
-	font-style: italic;
-    font-size: 1em;
-    margin-bottom: 0;
-}
 
 // Navigation - se _amber_navigation.scss
 
@@ -86,7 +86,6 @@ p {
 		text-align: center;
 		color: #fff;
 		background: rgba(0, 0, 0, 0.5);
-	
 		padding: 1em;
 		border-radius: 10px;
 

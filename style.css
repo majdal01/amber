@@ -1026,22 +1026,18 @@ p {
 .site-branding {
   padding: 1em;
   float: left;
-  vertical-align: bottom;
 }
-
-.site-title {
+.site-branding .site-title {
   font-size: 1.5em;
   font-weight: 700;
 }
-
-.site-title, .site-description {
+.site-branding .site-title, .site-branding .site-description {
   margin: 0;
   line-height: 1em;
   display: inline-block;
-  vertical-align: bottom;
+  vertical-align: center;
 }
-
-.site-description {
+.site-branding .site-description {
   margin-left: 0.5em;
   font-style: italic;
   font-size: 1em;
