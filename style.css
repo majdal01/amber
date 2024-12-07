@@ -660,6 +660,9 @@ textarea {
 .main-navigation li {
   position: relative;
 }
+.main-navigation li:hover > a, .main-navigation li.focus > a {
+  text-decoration: underline;
+}
 .main-navigation a {
   display: block;
   text-decoration: none;
@@ -1032,115 +1035,6 @@ h1, h2 {
   margin: 1em;
 }
 
-/*
-.main-navigation {
-	display: flex;
-	width: 100%;
-	background-color: #F0D8BE;
-	justify-content: flex-end;
-
-	.site-logo {
-        margin-right: auto; // Push the logo to the left
-        img {
-            max-height: 50px; // Adjust the logo size as needed
-            height: auto;
-            width: auto;
-        }
-    }
-
-	ul {
-		display: flex;
-		list-style: none;
-		margin: 0 auto;
-		padding: 1em;
-		max-width: 1024px;
-
-		ul {
-			display: flex;
-			position: absolute;
-			top: 100%;
-			left: -999em;
-			z-index: 99999;
-
-			ul {
-				left: -999em;
-				top: 0;
-			}
-
-			li {
-
-				&:hover > ul,
-				&.focus > ul {
-					display: block;
-					left: auto;
-				}
-			}
-
-			a {
-				width: 200px;
-			}
-
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-	}
-
-	li {
-		position: relative;
-		padding-right: 2em;
-	}
-
-	a {
-		display: block;
-		text-decoration: none;
-		&:hover {
-			border-bottom: 1px solid #000;
-		}
-	}
-
-}*/
-/* Small menu. */
-/*
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-
-	.menu-toggle {
-		display: none;
-	}
-
-	.main-navigation ul {
-		display: flex;
-	}
-}
-
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
-
-	.site-main & {
-		margin: 0 0 1.5em;
-	}
-
-	.nav-links {
-		display: flex;
-	}
-
-	.nav-previous {
-		flex: 1 0 50%;
-	}
-
-	.nav-next {
-		text-align: end;
-		flex: 1 0 50%;
-	}
-}*/
 .site-header {
   background: #f2f2f2;
 }
