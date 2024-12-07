@@ -984,12 +984,31 @@ body {
 }
 
 a {
+  color: #010101;
   text-decoration: none;
+}
+a:hover, a:focus, a:active {
+  color: #808469;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:hover, a:active {
+  outline: 0;
 }
 
 h1, h2 {
   font-family: "JohnDoe", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: 400;
+}
+
+.site-header, .site-footer, .site-main, .site-content {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.site-main, .site-content {
+  padding: 0 1em;
 }
 
 .site-branding {
@@ -1014,32 +1033,6 @@ h1, h2 {
   font-style: italic;
   font-size: 1em;
   margin-bottom: 0;
-}
-
-.content-area {
-  background-color: #fff;
-  margin: 0 auto;
-  max-width: 1440px;
-}
-
-.entry-title {
-  margin: 0;
-}
-
-.site-header {
-  background: #f2f2f2;
-}
-
-.hentry, .comments-area, .page-header, .site-main .posts-navigation, .paging-navigation {
-  background: #f2f2f2;
-}
-
-.widget {
-  background: #f2f2f2;
-}
-
-.site-footer {
-  background: #f2f2f2;
 }
 
 /*--------------------------------------------------------------
@@ -1096,6 +1089,7 @@ h1, h2 {
 .main-navigation a {
   display: block;
   text-decoration: none;
+  padding-left: 1em;
 }
 .main-navigation .current_page_item > a,
 .main-navigation .current-menu-item > a,

@@ -13,13 +13,23 @@ body {
 	background-color: white;
 }
 
-a {
-    text-decoration: none;
-}
+@include links();
 
 h1, h2 {
     font-family: $font__header;
     font-weight: 400;
+}
+
+
+// Overordnet layout
+
+.site-header, .site-footer, .site-main, .site-content {
+	margin: 0 auto;
+	max-width: 1280px;
+}
+
+.site-main, .site-content {
+	padding: 0 1em;
 }
 
 
@@ -49,38 +59,3 @@ h1, h2 {
     margin-bottom: 0;
 }
 
-
-
-
-
-// Main area
-
-.content-area {
-    background-color: #fff;
-    margin: 0 auto;
-    max-width: 1440px;
-}
-
-.entry-title {
-    margin: 0;
-}
-
-
-
-//Temp color guide
-
-.site-header {
-    @include guide;
-}
-
-.hentry, .comments-area, .page-header, .site-main .posts-navigation, .paging-navigation {
-    @include guide;
-}
-
-.widget {
-    @include guide;
-}
-
-.site-footer {
-    @include guide;
-}

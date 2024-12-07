@@ -5,7 +5,7 @@
 //Default colors
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
-$color__background-hr: #ccc;
+$color__background-hr: #4C563B;
 $color__background-button: #e6e6e6;
 $color__background-pre: #eee;
 $color__background-ins: #fff;
@@ -15,12 +15,13 @@ $color__text-input: #666;
 $color__text-input-focus: #111;
 $color__link: #010101; 
 $color__link-visited: #010101; 
-$color__link-hover: #4C563B; 
+$color__link-hover: #808469; 
 $color__text-main: #404040;
 
-$color__border-button: #ccc #ccc #bbb;
-$color__border-button-hover: #ccc #bbb #aaa;
-$color__border-button-focus: #aaa #bbb #bbb;
+$color__border-button: #4C563B #4C563B #4C563B;
+$color__border-button-hover: #4C563B #4C563B #4C563B;
+$color__border-button-focus: #4C563B #4C563B #4C563B;
+$color__background-button-hover: #4C563B;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
 
@@ -69,6 +70,3 @@ $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
 
 
-@mixin guide(){
-    background: #f2f2f2;
-}
