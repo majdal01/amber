@@ -25,7 +25,7 @@ function amber_custom_header_setup() {
 				'default-image'      => '',
 				'default-text-color' => '000000',
 				'width'              => 2000,
-				'height'             => 400,
+				'height'             => 800,
 				'flex-height'        => true,
 				'wp-head-callback'   => 'amber_header_style',
 			)

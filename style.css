@@ -63,7 +63,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
-  background-color: white;
 }
 
 /* Sections
@@ -72,8 +71,7 @@ html {
  * Remove the margin in all browsers.
  */
 body {
-  width: 100%;
-  margin: 0px auto;
+  margin: 0;
 }
 
 /**
@@ -453,7 +451,7 @@ acronym {
 
 mark,
 ins {
-  background: #fff;
+  background: #fff9c0;
   text-decoration: none;
 }
 
@@ -464,7 +462,7 @@ big {
 /* Elements
 --------------------------------------------- */
 body {
-  background: #fff;
+  background: #fff9c0;
 }
 
 hr {
@@ -525,10 +523,10 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-  color: #010101;
+  color: #4169e1;
 }
 a:visited {
-  color: #010101;
+  color: #800080;
 }
 a:hover, a:focus, a:active {
   outline: 0;
@@ -949,7 +947,7 @@ textarea {
   text-decoration: underline;
 }
 .site-footer a:hover, .site-footer a:focus {
-  color: #4C563B;
+  color: #191970;
 }
 .site-footer .site-info {
   margin: 0 auto; /* Center the content */
@@ -971,4 +969,33 @@ textarea {
 
 .entry-title {
   margin: 0;
+}
+
+/*--------------------------------------------------------------
+/* Variabler og mixins
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+/* Amber style
+--------------------------------------------------------------*/
+* {
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2 {
+  font-family: "JohnDoe", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 400;
 }/*# sourceMappingURL=style.css.map */

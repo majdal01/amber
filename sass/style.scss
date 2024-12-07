@@ -116,3 +116,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 
 @import "amberstyle/main-area";
+
+/*--------------------------------------------------------------
+/* Variabler og mixins
+--------------------------------------------------------------*/
+
+@import "amberstyle/amber_variabler";
+
+/*--------------------------------------------------------------
+/* Amber style
+--------------------------------------------------------------*/
+
+@import "amberstyle/amber_styles";
