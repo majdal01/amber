@@ -107,6 +107,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 // Amberstyle
 /*--------------------------------------------------------------
+
+/* Mixins
+--------------------------------------------------------------*/
+@import "amberstyle/amber_mixins";
+
 /* Footer
 --------------------------------------------------------------*/
 @import "amberstyle/footer";

@@ -144,6 +144,8 @@ function amber_scripts() {
 	//Adobe Fonts
 	wp_enqueue_style( 'typekit', 'https://use.typekit.net/cot6hfo.css', array(), null );
 	
+	// Font Awesome
+    wp_enqueue_script( 'font-awesome', 'https://kit.fontawesome.com/a6b8ab610e.js', array(), null, true );
 
 	wp_enqueue_script( 'amber-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 

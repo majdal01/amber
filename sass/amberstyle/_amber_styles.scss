@@ -15,10 +15,19 @@ body {
 
 @include links();
 
+
 h1, h2 {
     font-family: $font__header;
     font-weight: 400;
 }
+
+p {
+	font-family: $font__main;
+	font-size: 1.2em;
+	line-height: 1.5em;
+}
+
+
 
 
 // Overordnet layout
@@ -38,6 +47,7 @@ h1, h2 {
 .site-branding {
 	padding: 1em;
 	float: left;
+	vertical-align: bottom;
 }
 
 .site-title {
@@ -57,5 +67,43 @@ h1, h2 {
 	font-style: italic;
     font-size: 1em;
     margin-bottom: 0;
+}
+
+// Navigation - se _amber_navigation.scss
+
+// Text på herobillede på frontpage
+
+/* _header.scss */
+
+.header-image-container {
+    position: relative;
+	
+	.header-overlay {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		color: #fff;
+		background: rgba(0, 0, 0, 0.5);
+	
+		padding: 1em;
+		border-radius: 10px;
+
+		h1{
+			font-size: 2.5em;
+		}
+
+		p{
+			font-size: 1.2em;
+    		margin: 0 0 20px;
+		}
+
+		.header-button {
+
+			@include button();
+		}
+	}
+   
 }
 

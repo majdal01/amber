@@ -79,18 +79,23 @@
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-	display: block;
+	display: none;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (max-width: 900px) {
 
 	.menu-toggle {
-		display: none;
+		display: block;
 	}
 
 	.main-navigation ul {
-		display: flex;
+		display: none;
+		flex-direction: column;
 	}
+
+	.main-navigation.toggled ul {
+        display: flex; /* Show menu items when toggled */
+    }
 }
 
 .comment-navigation,

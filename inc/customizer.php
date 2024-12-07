@@ -31,7 +31,68 @@ function amber_customize_register( $wp_customize ) {
 			)
 		);
 	}
+
+	// Customizable header content. Copilot helped me with this.
+
+	// Add section for header content
+    $wp_customize->add_section( 'amber_header_content' , array(
+        'title'      => __( 'Header Content', 'amber' ),
+        'priority'   => 30,
+    ) );
+
+    // Add setting for header h1
+    $wp_customize->add_setting( 'amber_header_h1' , array(
+        'default'   => __( 'Welcome to My Site', 'amber' ),
+        'transport' => 'refresh',
+    ) );
+
+    // Add control for header h1
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'amber_header_h1', array(
+        'label'      => __( 'Header H1', 'amber' ),
+        'section'    => 'amber_header_content',
+        'settings'   => 'amber_header_h1',
+    ) ) );
+
+    // Add setting for header paragraph
+    $wp_customize->add_setting( 'amber_header_p' , array(
+        'default'   => __( 'This is a customizable paragraph.', 'amber' ),
+        'transport' => 'refresh',
+    ) );
+
+    // Add control for header paragraph
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'amber_header_p', array(
+        'label'      => __( 'Header Paragraph', 'amber' ),
+        'section'    => 'amber_header_content',
+        'settings'   => 'amber_header_p',
+    ) ) );
+
+    // Add setting for header button text
+    $wp_customize->add_setting( 'amber_header_button_text' , array(
+        'default'   => __( 'Click Me', 'amber' ),
+        'transport' => 'refresh',
+    ) );
+
+    // Add control for header button text
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'amber_header_button_text', array(
+        'label'      => __( 'Header Button Text', 'amber' ),
+        'section'    => 'amber_header_content',
+        'settings'   => 'amber_header_button_text',
+    ) ) );
+
+    // Add setting for header button URL
+    $wp_customize->add_setting( 'amber_header_button_url' , array(
+        'default'   => '#',
+        'transport' => 'refresh',
+    ) );
+
+    // Add control for header button URL
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'amber_header_button_url', array(
+        'label'      => __( 'Header Button URL', 'amber' ),
+        'section'    => 'amber_header_content',
+        'settings'   => 'amber_header_button_url',
+    ) ) );
 }
+
 add_action( 'customize_register', 'amber_customize_register' );
 
 /**

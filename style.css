@@ -938,6 +938,9 @@ textarea {
 /*--------------------------------------------------------------
 // Amberstyle
 /*--------------------------------------------------------------
+
+/* Mixins
+--------------------------------------------------------------*/
 /* Footer
 --------------------------------------------------------------*/
 #colophon {
@@ -987,6 +990,9 @@ a {
   color: #010101;
   text-decoration: none;
 }
+a:visited {
+  color: #010101;
+}
 a:hover, a:focus, a:active {
   color: #808469;
 }
@@ -1002,6 +1008,12 @@ h1, h2 {
   font-weight: 400;
 }
 
+p {
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
 .site-header, .site-footer, .site-main, .site-content {
   margin: 0 auto;
   max-width: 1280px;
@@ -1014,6 +1026,7 @@ h1, h2 {
 .site-branding {
   padding: 1em;
   float: left;
+  vertical-align: bottom;
 }
 
 .site-title {
@@ -1033,6 +1046,42 @@ h1, h2 {
   font-style: italic;
   font-size: 1em;
   margin-bottom: 0;
+}
+
+/* _header.scss */
+.header-image-container {
+  position: relative;
+}
+.header-image-container .header-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1em;
+  border-radius: 10px;
+}
+.header-image-container .header-overlay h1 {
+  font-size: 2.5em;
+}
+.header-image-container .header-overlay p {
+  font-size: 1.2em;
+  margin: 0 0 20px;
+}
+.header-image-container .header-overlay .header-button {
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  padding: 0.3em 3em;
+  font-size: 1.2em;
+  background-color: #F0D8BE;
+  color: #010101;
+  text-decoration: none;
+  border-radius: 50px;
+}
+.header-image-container .header-overlay .header-button:hover {
+  border-color: #4C563B;
+  background-color: #4C563B;
 }
 
 /*--------------------------------------------------------------
@@ -1101,15 +1150,19 @@ h1, h2 {
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-  display: block;
+  display: none;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (max-width: 900px) {
   .menu-toggle {
-    display: none;
+    display: block;
   }
   .main-navigation ul {
-    display: flex;
+    display: none;
+    flex-direction: column;
+  }
+  .main-navigation.toggled ul {
+    display: flex; /* Show menu items when toggled */
   }
 }
 .site-main .comment-navigation,

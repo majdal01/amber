@@ -1,0 +1,41 @@
+
+@mixin links(){
+	a {
+		color: $color__link;
+		text-decoration: none;
+
+		&:visited {
+			color: $color__link-visited;
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: $color__link-hover;
+		}
+
+		&:focus {
+			outline: thin dotted;
+		}
+
+		&:hover,
+		&:active {
+			outline: 0;
+		}
+	}
+}
+
+@mixin button {
+	font-family: $font__main;
+    padding: 0.3em 3em;
+    font-size: 1.2em;
+	background-color: $color__background-button;
+	color: $color__text-button;
+    text-decoration: none;
+    border-radius: 50px;
+
+	&:hover {
+		border-color: $color__border-button-hover;
+		background-color: $color__background-button-hover;
+	}
+}
