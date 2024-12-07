@@ -143,6 +143,7 @@ function amber_scripts() {
 
 	//Adobe Fonts
 	wp_enqueue_style( 'typekit', 'https://use.typekit.net/cot6hfo.css', array(), null );
+	
 
 	wp_enqueue_script( 'amber-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
@@ -151,6 +152,9 @@ function amber_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'amber_scripts' ); // Når WordPress indlæser scripts og styles, så skal den bruge funktionen amber_scripts
+
+
+
 
 /**
  * Implement the Custom Header feature.

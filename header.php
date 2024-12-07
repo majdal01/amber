@@ -18,7 +18,7 @@
     <link rel="profile" href="https://gmpg.org/xfn/11">
     
 	<?php wp_head(); ?> 
-
+    
 </head>
 
 <body <?php body_class(); ?>>
@@ -64,4 +64,9 @@
             );
             ?>
         </nav><!-- #site-navigation -->
+
+        <!--IMG HEADER-->
+        <?php the_header_image_tag(); ?>
+      
+
     </header><!-- #masthead -->
