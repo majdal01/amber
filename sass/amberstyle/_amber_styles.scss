@@ -67,34 +67,6 @@ h1, h2 {
 
 
 
-//Navigation
-
-.main-navigation {
-	clear:none;
-	float: none;
-	width: auto;
-	ul {
-		float: right;
-		padding: 0 1em;
-		li {
-			float: left;
-			a {
-				padding: 1em;
-			}
-			ul {
-				display: none;
-			}
-		}
-	}
-}
-
-.menu-toggle {
-	float: right;
-	margin: 1em;
-}
-
-
-
 //Temp color guide
 
 .site-header {
