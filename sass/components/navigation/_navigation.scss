@@ -1,30 +1,16 @@
-
-// Styling til header navigation
-
 .main-navigation {
-	display: flex;
+	display: block;
 	width: 100%;
-	background-color: #F0D8BE;
-	justify-content: flex-end;
-
-	.site-logo {
-        margin-right: auto; // Push the logo to the left
-        img {
-            max-height: 50px; // Adjust the logo size as needed
-            height: auto;
-            width: auto;
-        }
-    }
 
 	ul {
-		display: flex;
+		display: none;
 		list-style: none;
-		margin: 0 auto;
-		padding: 1em;
-		max-width: 1024px;
+		margin: 0;
+		padding-left: 0;
 
 		ul {
-			display: flex;
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
 			position: absolute;
 			top: 100%;
 			left: -999em;
@@ -48,6 +34,13 @@
 				width: 200px;
 			}
 
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
 		}
 
 		li:hover > ul,
@@ -58,17 +51,22 @@
 
 	li {
 		position: relative;
-		padding-right: 2em;
+
+		&:hover > a,
+		&.focus > a {
+		}
 	}
 
 	a {
 		display: block;
 		text-decoration: none;
-		&:hover {
-			border-bottom: 1px solid #000;
-		}
 	}
 
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
 }
 
 /* Small menu. */
