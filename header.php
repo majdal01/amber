@@ -48,7 +48,7 @@
             <?php endif; ?>
         </div><!-- .site-branding -->
 
-        <nav class="main-navigation">
+        <nav id="site-navigation" class="main-navigation">
 			<?php if ( has_custom_logo() ) : ?>
 			<div class="site-logo">
 				<?php the_custom_logo(); ?>

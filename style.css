@@ -946,19 +946,6 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-/* Main area
---------------------------------------------------------------*/
-.content-area {
-  background-color: #fff;
-  margin: 0 auto;
-  max-width: 1440px;
-}
-
-.entry-title {
-  margin: 0;
-}
-
-/*--------------------------------------------------------------
 /* Variabler og mixins
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -985,6 +972,64 @@ a {
 h1, h2 {
   font-family: "JohnDoe", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: 400;
+}
+
+.site-branding {
+  padding: 1em;
+  float: left;
+}
+
+.site-title {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.site-title, .site-description {
+  margin: 0;
+  line-height: 1em;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.site-description {
+  margin-left: 0.5em;
+  font-style: italic;
+  font-size: 1em;
+  margin-bottom: 0;
+}
+
+.content-area {
+  background-color: #fff;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.entry-title {
+  margin: 0;
+}
+
+.main-navigation {
+  clear: none;
+  float: none;
+  width: auto;
+}
+.main-navigation ul {
+  float: right;
+  padding: 0 1em;
+}
+.main-navigation ul li {
+  float: left;
+}
+.main-navigation ul li a {
+  padding: 1em;
+}
+.main-navigation ul li ul {
+  display: none;
+}
+
+.menu-toggle {
+  float: right;
+  margin: 1em;
 }
 
 /*
@@ -1095,4 +1140,19 @@ h1, h2 {
 		text-align: end;
 		flex: 1 0 50%;
 	}
-}*//*# sourceMappingURL=style.css.map */
+}*/
+.site-header {
+  background: #f2f2f2;
+}
+
+.hentry, .comments-area, .page-header, .site-main .posts-navigation, .paging-navigation {
+  background: #f2f2f2;
+}
+
+.widget {
+  background: #f2f2f2;
+}
+
+.site-footer {
+  background: #f2f2f2;
+}/*# sourceMappingURL=style.css.map */

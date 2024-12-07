@@ -22,118 +22,93 @@ h1, h2 {
     font-weight: 400;
 }
 
+
+// Header før navigation
+
+.site-branding {
+	padding: 1em;
+	float: left;
+}
+
+.site-title {
+    font-size: 1.5em;
+	font-weight: 700;
+}
+
+.site-title, .site-description {
+	margin: 0;
+	line-height: 1em;
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.site-description {
+	margin-left: 0.5em;
+	font-style: italic;
+    font-size: 1em;
+    margin-bottom: 0;
+}
+
+
+
+
+
+// Main area
+
+.content-area {
+    background-color: #fff;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.entry-title {
+    margin: 0;
+}
+
+
+
 //Navigation
 
-
-// Styling til header navigation
-
-/*
 .main-navigation {
-	display: flex;
-	width: 100%;
-	background-color: #F0D8BE;
-	justify-content: flex-end;
-
-	.site-logo {
-        margin-right: auto; // Push the logo to the left
-        img {
-            max-height: 50px; // Adjust the logo size as needed
-            height: auto;
-            width: auto;
-        }
-    }
-
+	clear:none;
+	float: none;
+	width: auto;
 	ul {
-		display: flex;
-		list-style: none;
-		margin: 0 auto;
-		padding: 1em;
-		max-width: 1024px;
-
-		ul {
-			display: flex;
-			position: absolute;
-			top: 100%;
-			left: -999em;
-			z-index: 99999;
-
-			ul {
-				left: -999em;
-				top: 0;
-			}
-
-			li {
-
-				&:hover > ul,
-				&.focus > ul {
-					display: block;
-					left: auto;
-				}
-			}
-
+		float: right;
+		padding: 0 1em;
+		li {
+			float: left;
 			a {
-				width: 200px;
+				padding: 1em;
 			}
-
+			ul {
+				display: none;
+			}
 		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-	}
-
-	li {
-		position: relative;
-		padding-right: 2em;
-	}
-
-	a {
-		display: block;
-		text-decoration: none;
-		&:hover {
-			border-bottom: 1px solid #000;
-		}
-	}
-
-}*/
-
-/* Small menu. */
-/*
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-
-	.menu-toggle {
-		display: none;
-	}
-
-	.main-navigation ul {
-		display: flex;
 	}
 }
 
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
+.menu-toggle {
+	float: right;
+	margin: 1em;
+}
 
-	.site-main & {
-		margin: 0 0 1.5em;
-	}
 
-	.nav-links {
-		display: flex;
-	}
 
-	.nav-previous {
-		flex: 1 0 50%;
-	}
+//Temp color guide
 
-	.nav-next {
-		text-align: end;
-		flex: 1 0 50%;
-	}
-}*/
+.site-header {
+    @include guide;
+}
+
+.hentry, .comments-area, .page-header, .site-main .posts-navigation, .paging-navigation {
+    @include guide;
+}
+
+.widget {
+    @include guide;
+}
+
+.site-footer {
+    @include guide;
+}
