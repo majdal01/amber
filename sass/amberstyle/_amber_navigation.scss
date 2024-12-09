@@ -8,9 +8,11 @@
 		list-style: none;
 		margin: 0;
 		padding: 1em;
+		padding-right: 2em;
         justify-content: flex-end;
 
 		ul {
+			background-color: $color__background-screen;
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
 			position: absolute;
@@ -33,7 +35,7 @@
 			}
 
 			a {
-				width: 200px;
+				width: 110px;
 			}
 
 			:hover > a,
@@ -65,7 +67,7 @@
 	a {
 		display: block;
 		text-decoration: none;
-        padding-left: 1em;
+        padding-left: 2em;
 	}
 
 	.current_page_item > a,
