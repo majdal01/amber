@@ -32,6 +32,9 @@ function amber_customize_register( $wp_customize ) {
 		);
 	}
 
+
+
+    //***********************************************************/
 	// Customizable header content. Copilot helped me with this.
 
 	// Add section for header content
@@ -93,41 +96,55 @@ function amber_customize_register( $wp_customize ) {
     ) ) );
 
 
+
+    //***********************************************************/
     // Section til forside ikoner. Jeg har fået hjælp af Copilot til at lave denne del.
+
     $wp_customize->add_section( 'amber_front_page_icons' , array(
         'title'      => __( 'Front Page Icons', 'amber' ),
         'priority'   => 30,
     ) );
 
-    // Setting og control for ikoner og tekst
     for ( $i = 1; $i <= 3; $i++ ) {
+        // Icon setting
+        $wp_customize->add_setting( "amber_icon_$i" , array(
+            'default'   => 'fas fa-star', // Forskellige default ikoner
+            'transport' => 'refresh',
+        ) );
 
-    // Icon setting
-    $wp_customize->add_setting( "amber_icon_$i" , array(
-        'default'   => __( 'fas fa-star', 'amber' ),
-        'transport' => 'refresh',
-    ) );
+        // Icon control
+        $wp_customize->add_control( new WP_Customize_Control( $wp_customize, "amber_icon_$i", array(
+            'label'      => __( "Icon $i", 'amber' ),
+            'section'    => 'amber_front_page_icons',
+            'settings'   => "amber_icon_$i",
+        ) ) );
 
-    // Icon control
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, "amber_icon_$i", array(
-        'label'      => __( "Icon $i", 'amber' ),
-        'section'    => 'amber_front_page_icons',
-        'settings'   => "amber_icon_$i",
-    ) ) );
+        // Text setting
+        $wp_customize->add_setting( "amber_icon_text_$i" , array(
+            'default'   => 'Your skills', // Default text
+            'transport' => 'refresh',
+        ) );
 
-    // Text setting
-    $wp_customize->add_setting( "amber_icon_text_$i" , array(
-        'default'   => __( 'Your skills', 'amber' ),
-        'transport' => 'refresh',
-    ) );
+        // Text control
+        $wp_customize->add_control( new WP_Customize_Control( $wp_customize, "amber_icon_text_$i", array(
+            'label'      => __( "Text $i", 'amber' ),
+            'section'    => 'amber_front_page_icons',
+            'settings'   => "amber_icon_text_$i",
+        ) ) );
+    
+            // Color setting
+        $wp_customize->add_setting( "amber_icon_color_$i" , array(
+            'default'   => '#000000', // Default color
+            'transport' => 'refresh',
+        ) );
 
-    // Text control
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, "amber_icon_text_$i", array(
-        'label'      => __( "Text $i", 'amber' ),
-        'section'    => 'amber_front_page_icons',
-        'settings'   => "amber_icon_text_$i",
-    ) ) );
-}
+        // Color control
+        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, "amber_icon_color_$i", array(
+            'label'      => __( "Icon Color $i", 'amber' ),
+            'section'    => 'amber_front_page_icons',
+            'settings'   => "amber_icon_color_$i",
+        ) ) );
+    }
 }
 
 

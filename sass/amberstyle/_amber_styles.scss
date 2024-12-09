@@ -1,3 +1,5 @@
+// Generelt styling
+
 * {
     box-sizing: border-box;
     word-wrap: break-word;
@@ -21,16 +23,19 @@ h1, h2 {
     font-weight: 400;
 }
 
+h1 {
+	font-size: 4em;
+}
+
+h2 {
+	font-size: 3em;
+}
+
 p {
 	font-family: $font__main;
 	font-size: 1.2em;
 	line-height: 1.5em;
 }
-
-
-
-
-// Overordnet layout
 
 .site-header, .site-footer, .site-main, .site-content {
 	margin: 0 auto;
@@ -42,7 +47,8 @@ p {
 }
 
 
-// Header før navigation
+//***********************************************/ 
+// Venstre side af navigation 
 
 .site-branding {
 	padding: 1em;
@@ -68,12 +74,12 @@ p {
 	}
 }
 
-
+//***********************************************/
 // Navigation - se _amber_navigation.scss
 
-// Text på herobillede på frontpage
 
-/* _header.scss */
+//**********************************************/
+// Text på herobillede på frontpage
 
 .header-image-container {
     position: relative;
@@ -110,6 +116,7 @@ p {
    
 }
 
+//***********************************************/ 
 /* Forside sektion med ikoner */
 
 .front-page-icons {
@@ -136,6 +143,42 @@ p {
     	}
 	}
 }
+
+//***********************************************/ 
+/* Forside sektion med lille galleri */
+
+.small-gallery-container {
+	background-color: $color__background-lightgreen;
+	padding: 2em 0;;
+
+	.small-gallery-box {
+		border: 4px solid $color__text-screen;
+		background-color: $color__background-beige;
+		width: 300px;
+		height: 380px;
+		margin: 0 1em;
+		display: flex;
+		align-items: end;
+		box-shadow: 15px 15px 5px rgba(76, 86, 59);
+
+		h2{
+			padding: 0.5em;
+			margin: 0;
+		}
+
+		.small-gallery-text {
+			width: 300px;
+			p {
+				color: $color__background-beige;
+			}
+		}
+	}
+}
+
+
+//***********************************************/ 
+//***********************************************/ 
+//Responsivitet
 
 //Responsivitet Header med billede og text
 
