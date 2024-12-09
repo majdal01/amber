@@ -25,18 +25,19 @@
 	}
 }
 
-@mixin button {
+@mixin button-header {
 	font-family: $font__main;
     padding: 0.3em 3em;
     font-size: 1.2em;
-	background-color: $color__background-button;
-	color: $color__text-button;
+	border: 2px solid $color__background-body;
+	color: $color__background-body;
     text-decoration: none;
     border-radius: 50px;
 
 	&:hover {
-		border-color: $color__border-button-hover;
+		
 		background-color: $color__background-button-hover;
 		color: $color__text-button-hover;
+		
 	}
 }

@@ -80,7 +80,7 @@ p {
 	
 	.header-overlay {
 		position: absolute;
-		top: 50%;
+		top: 60%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		text-align: center;
@@ -99,13 +99,58 @@ p {
 		p{
 			font-size: 1.2em;
     		padding: 0;
-			margin-top: 0
+			margin-top: 0;
+			padding: 0 2em ;
 		}
 
 		.header-button {
-			@include button();
+			@include button-header();
 		}
 	}
    
 }
 
+/* Forside sektion med ikoner */
+
+.front-page-icons {
+    display: flex;
+	flex-direction: row;
+	align-items: center;
+    justify-content: space-around;
+    padding: 3em 0;
+    text-align: center;
+
+    .icon-box {
+        flex: 1;
+        margin: 0 1em;
+
+        i {
+            font-size: 3em;
+            color: $color__text-screen; 
+        }
+
+        p {
+            margin-top: 0.5em;
+            font-size: 1.2em;
+            color: #666; 
+    	}
+	}
+}
+
+//Responsivitet Header med billede og text
+
+@media screen and (max-width: 900px) {
+
+	.header-image-container {
+		
+		.header-overlay {
+			h1 {
+				font-size: 2.5em;
+			}
+
+			p {
+				font-size: 1em;
+			}
+		}
+	}
+}

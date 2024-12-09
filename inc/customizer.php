@@ -91,7 +91,45 @@ function amber_customize_register( $wp_customize ) {
         'section'    => 'amber_header_content',
         'settings'   => 'amber_header_button_url',
     ) ) );
+
+
+    // Section til forside ikoner. Jeg har fået hjælp af Copilot til at lave denne del.
+    $wp_customize->add_section( 'amber_front_page_icons' , array(
+        'title'      => __( 'Front Page Icons', 'amber' ),
+        'priority'   => 30,
+    ) );
+
+    // Setting og control for ikoner og tekst
+    for ( $i = 1; $i <= 3; $i++ ) {
+
+    // Icon setting
+    $wp_customize->add_setting( "amber_icon_$i" , array(
+        'default'   => __( 'fas fa-star', 'amber' ),
+        'transport' => 'refresh',
+    ) );
+
+    // Icon control
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, "amber_icon_$i", array(
+        'label'      => __( "Icon $i", 'amber' ),
+        'section'    => 'amber_front_page_icons',
+        'settings'   => "amber_icon_$i",
+    ) ) );
+
+    // Text setting
+    $wp_customize->add_setting( "amber_icon_text_$i" , array(
+        'default'   => __( 'Your skills', 'amber' ),
+        'transport' => 'refresh',
+    ) );
+
+    // Text control
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, "amber_icon_text_$i", array(
+        'label'      => __( "Text $i", 'amber' ),
+        'section'    => 'amber_front_page_icons',
+        'settings'   => "amber_icon_text_$i",
+    ) ) );
 }
+}
+
 
 add_action( 'customize_register', 'amber_customize_register' );
 
