@@ -1115,30 +1115,52 @@ p {
   color: #666;
 }
 
+.line {
+  margin: 5px 0;
+  height: 4px;
+  background: repeating-linear-gradient(90deg, #000000 0 15px, rgba(0, 0, 0, 0) 0 25px);
+}
+
 /* Forside sektion med lille galleri */
 .small-gallery-container {
   background-color: #808469;
-  padding: 2em 0;
+  padding: 6em 0 4em 0;
 }
 .small-gallery-container .small-gallery-box {
   border: 4px solid #010101;
   background-color: #F0D8BE;
   width: 300px;
   height: 380px;
-  margin: 0 1em;
+  margin: 0 2em;
   display: flex;
   align-items: end;
-  box-shadow: 15px 15px 5px rgb(76, 86, 59);
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.8);
 }
 .small-gallery-container .small-gallery-box h2 {
   padding: 0.5em;
   margin: 0;
 }
-.small-gallery-container .small-gallery-box .small-gallery-text {
-  width: 300px;
+.small-gallery-container .small-gallery-text {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  padding: 2em 2.5em;
 }
-.small-gallery-container .small-gallery-box .small-gallery-text p {
+.small-gallery-container .small-gallery-text p {
   color: #F0D8BE;
+}
+.small-gallery-container .small-gallery-text a {
+  color: #F0D8BE;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 550;
+}
+.small-gallery-container .gallery {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (max-width: 900px) {

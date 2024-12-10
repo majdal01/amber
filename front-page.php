@@ -29,19 +29,21 @@ get_header();
             <?php endfor; ?>
         </div>
 
+        <div class="line"></div>
+
     <!------------------------------------------------------------>
     <!-- Forside sektion til lille galleri -->
-
-        <div class="small-gallery-container">
-                <div class="small-gallery-style">
-                    <div class="small-gallery-box">
-                        <h2>Digital art</h2>
-                    </div>
-                    <section class="small-gallery-text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="#">See more...</a>
-                    </section>
-                </div>
+    <div class="small-gallery-container" style="background-color: <?php echo esc_attr( get_theme_mod( 'amber_small_gallery_container_bg_color', '#ffffff' ) ); ?>;">
+            <div class="small-gallery-box" style="background-color: <?php echo esc_attr( get_theme_mod( 'amber_small_gallery_color', '#F0D8BE' ) ); ?>;">
+                <h2 style="color: <?php echo esc_attr( get_theme_mod( 'amber_small_gallery_h2_color', '#000000' ) ); ?>;"><?php echo esc_html( get_theme_mod( 'amber_small_gallery_h2', 'Small gallery' ) ); ?></h2>
+            </div>
+            <section class="small-gallery-text">
+                <p style="color: <?php echo esc_attr( get_theme_mod( 'amber_small_gallery_p_color', '#000000' ) ); ?>;"><?php echo esc_html( get_theme_mod( 'amber_small_gallery_p', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' ) ); ?></p>
+                <a href="<?php echo esc_url( get_theme_mod( 'amber_small_gallery_a_url', '#' ) ); ?>" style="color: <?php echo esc_attr( get_theme_mod( 'amber_small_gallery_a_color', '#000000' ) ); ?>;"><?php echo esc_html( get_theme_mod( 'amber_small_gallery_a_text', 'See more...' ) ); ?></a>
+            </section>
+            <div class="gallery">
+                <!-- Gallery content goes here -->
+            </div>
         </div>
 
 

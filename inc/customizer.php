@@ -105,10 +105,17 @@ function amber_customize_register( $wp_customize ) {
         'priority'   => 30,
     ) );
 
+    // Define the default icons array
+    $default_icons = array(
+        'fas fa-palette',
+        'fas fa-paintbrush',
+        'fas fa-tablet-screen-button'
+    );
+
     for ( $i = 1; $i <= 3; $i++ ) {
         // Icon setting
         $wp_customize->add_setting( "amber_icon_$i" , array(
-            'default'   => 'fas fa-star', // Forskellige default ikoner
+            'default'   => $default_icons[$i - 1], // Forskellige default ikoner
             'transport' => 'refresh',
         ) );
 
@@ -145,6 +152,125 @@ function amber_customize_register( $wp_customize ) {
             'settings'   => "amber_icon_color_$i",
         ) ) );
     }
+
+    //***********************************************************/
+    // Section til small-gallery på forsiden. 
+
+        // Tilføjet mulighed for at redigere i small-gallery
+        $wp_customize->add_section( 'amber_small_gallery' , array(
+            'title'      => __( 'Small Gallery', 'amber' ),
+            'priority'   => 30,
+        ) );
+
+        // Color ændring af container background color
+        $wp_customize->add_setting( 'amber_small_gallery_container_bg_color' , array(
+            'default'   => '#ffffff', // Default color
+            'transport' => 'refresh',
+        ) );
+    
+        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'amber_small_gallery_container_bg_color', array(
+            'label'      => __( 'Container Background Color', 'amber' ),
+            'section'    => 'amber_small_gallery',
+            'settings'   => 'amber_small_gallery_container_bg_color',
+        ) ) );
+    
+        // Redigere small gallery box
+        $wp_customize->add_setting( 'amber_small_gallery_color' , array(
+            'default'   => '#F0D8BE', // Default color
+            'transport' => 'refresh',
+        ) );
+        
+        // Redigere color small gallery box
+        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'amber_small_gallery_color', array(
+            'label'      => __( 'Box Background Color', 'amber' ),
+            'section'    => 'amber_small_gallery',
+            'settings'   => 'amber_small_gallery_color',
+        ) ) );
+        
+        //Redigere small gallery box h2, p og a
+
+        //H2
+        $wp_customize->add_setting( 'amber_small_gallery_h2' , array(
+            'default'   => __( 'Small gallery', 'amber' ),
+            'transport' => 'refresh',
+        ) );
+        
+        $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'amber_small_gallery_h2', array(
+            'label'      => __( 'Box Heading', 'amber' ),
+            'section'    => 'amber_small_gallery',
+            'settings'   => 'amber_small_gallery_h2',
+        ) ) );
+
+        $wp_customize->add_setting( 'amber_small_gallery_h2_color' , array(
+            'default'   => '#000000', // Default color
+            'transport' => 'refresh',
+        ) );
+    
+        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'amber_small_gallery_h2_color', array(
+            'label'      => __( 'Heading Color', 'amber' ),
+            'section'    => 'amber_small_gallery',
+            'settings'   => 'amber_small_gallery_h2_color',
+        ) ) );
+        
+
+        //p
+        $wp_customize->add_setting( 'amber_small_gallery_p' , array(
+            'default'   => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'amber' ),
+            'transport' => 'refresh',
+        ) );
+    
+        $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'amber_small_gallery_p', array(
+            'label'      => __( 'Box Paragraph', 'amber' ),
+            'section'    => 'amber_small_gallery',
+            'settings'   => 'amber_small_gallery_p',
+        ) ) );
+    
+        $wp_customize->add_setting( 'amber_small_gallery_p_color' , array(
+            'default'   => '#000000', // Default color
+            'transport' => 'refresh',
+        ) );
+    
+        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'amber_small_gallery_p_color', array(
+            'label'      => __( 'Paragraph Color', 'amber' ),
+            'section'    => 'amber_small_gallery',
+            'settings'   => 'amber_small_gallery_p_color',
+        ) ) );
+
+
+        //a
+        $wp_customize->add_setting( 'amber_small_gallery_a_text' , array(
+            'default'   => __( 'See more...', 'amber' ),
+            'transport' => 'refresh',
+        ) );
+    
+        $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'amber_small_gallery_a_text', array(
+            'label'      => __( 'Link Text', 'amber' ),
+            'section'    => 'amber_small_gallery',
+            'settings'   => 'amber_small_gallery_a_text',
+        ) ) );
+    
+        $wp_customize->add_setting( 'amber_small_gallery_a_url' , array(
+            'default'   => '#',
+            'transport' => 'refresh',
+        ) );
+    
+        $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'amber_small_gallery_a_url', array(
+            'label'      => __( 'Link URL', 'amber' ),
+            'section'    => 'amber_small_gallery',
+            'settings'   => 'amber_small_gallery_a_url',
+        ) ) );
+    
+        $wp_customize->add_setting( 'amber_small_gallery_a_color' , array(
+            'default'   => '#000000', // Default color
+            'transport' => 'refresh',
+        ) );
+    
+        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'amber_small_gallery_a_color', array(
+            'label'      => __( 'Link Color', 'amber' ),
+            'section'    => 'amber_small_gallery',
+            'settings'   => 'amber_small_gallery_a_color',
+        ) ) );
+        
 }
 
 
