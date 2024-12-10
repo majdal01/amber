@@ -101,7 +101,7 @@ function amber_customize_register( $wp_customize ) {
     // Section til forside ikoner. Jeg har fået hjælp af Copilot til at lave denne del.
 
     $wp_customize->add_section( 'amber_front_page_icons' , array(
-        'title'      => __( 'Front Page Icons', 'amber' ),
+        'title'      => __( 'Front Page icons and text', 'amber' ),
         'priority'   => 30,
     ) );
 
@@ -158,7 +158,7 @@ function amber_customize_register( $wp_customize ) {
 
         // Tilføjet mulighed for at redigere i small-gallery
         $wp_customize->add_section( 'amber_small_gallery' , array(
-            'title'      => __( 'Small Gallery', 'amber' ),
+            'title'      => __( 'Small Gallery layout', 'amber' ),
             'priority'   => 30,
         ) );
 
@@ -273,7 +273,7 @@ function amber_customize_register( $wp_customize ) {
         
         // Add section for gallery images
         $wp_customize->add_section( 'amber_gallery' , array(
-            'title'      => __( 'Gallery', 'amber' ),
+            'title'      => __( 'Gallery images', 'amber' ),
             'priority'   => 30,
         ) );
 

@@ -1054,6 +1054,7 @@ p {
 
 .header-image-container {
   position: relative;
+  height: 50%;
 }
 .header-image-container .header-overlay {
   position: absolute;

@@ -157,6 +157,28 @@ add_action( 'wp_enqueue_scripts', 'amber_scripts' ); // Når WordPress indlæser
 
 
 
+// Opretter en Home page, hvis den ikke allerede er sat og sætter den som front page
+function amber_setup_front_page() {
+    // Check if the front page is already set
+    if ( 'page' !== get_option( 'show_on_front' ) ) {
+        
+        // Create a "Home" page
+        $front_page_id = wp_insert_post( array(
+            'post_title'    => 'Home', // Title of the page
+            'post_content'  => 'Welcome to your new homepage! Customize this page via the Customizer.', // Default content
+            'post_status'   => 'publish', // Publish it right away
+            'post_type'     => 'page', // It's a page, not a post
+        ) );
+
+        // If the page was created successfully, set it as the front page
+        if ( ! is_wp_error( $front_page_id ) ) {
+            update_option( 'show_on_front', 'page' ); // Tells WordPress to use a static front page
+            update_option( 'page_on_front', $front_page_id ); // Set "Home" as the front page
+        }
+    }
+}
+add_action( 'after_switch_theme', 'amber_setup_front_page' );
+
 
 /**
  * Implement the Custom Header feature.

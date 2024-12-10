@@ -65,17 +65,7 @@
             ?>
         </nav><!-- #site-navigation -->
 
-        <!--IMG HEADER-->
-        <div class="header-image-container">
-            <?php the_header_image_tag(); ?>
-            <div class="header-overlay">
-                <h1><?php echo get_theme_mod( 'amber_header_h1', __( 'Welcome to My Site', 'amber' ) ); ?></h1>
-                <p><?php echo get_theme_mod( 'amber_header_p', __( 'This is a customizable paragraph.', 'amber' ) ); ?></p>
-                <a href="<?php echo esc_url( get_theme_mod( 'amber_header_button_url', '#' ) ); ?>" class="header-button">
-                    <?php echo get_theme_mod( 'amber_header_button_text', __( 'Click Me', 'amber' ) ); ?>
-                </a>
-            </div>
-        </div>
+       
 </div>
       
 
