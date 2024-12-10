@@ -271,6 +271,35 @@ function amber_customize_register( $wp_customize ) {
             'settings'   => 'amber_small_gallery_a_color',
         ) ) );
         
+        // Add section for gallery images
+        $wp_customize->add_section( 'amber_gallery' , array(
+            'title'      => __( 'Gallery', 'amber' ),
+            'priority'   => 30,
+        ) );
+
+        // Define the default image URLs
+        $default_images = array(
+            get_template_directory_uri() . '/img/default3.jpg',
+            get_template_directory_uri() . '/img/default1.png',
+            get_template_directory_uri() . '/img/default2.jpg',
+            get_template_directory_uri() . '/img/default4.png'
+        );
+
+        // Add settings and controls for each gallery image
+        for ( $i = 1; $i <= 4; $i++ ) {
+            // Image setting
+            $wp_customize->add_setting( "amber_gallery_image_$i" , array(
+                'default'   => $default_images[$i - 1], // Default image URL
+                'transport' => 'refresh',
+            ) );
+
+            // Image control
+            $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, "amber_gallery_image_$i", array(
+                'label'      => __( "Gallery Image $i", 'amber' ),
+                'section'    => 'amber_gallery',
+                'settings'   => "amber_gallery_image_$i",
+            ) ) );
+        }
 }
 
 
