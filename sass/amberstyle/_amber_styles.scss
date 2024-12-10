@@ -43,7 +43,7 @@ p {
 }
 
 .site-main, .site-content {
-	padding: 0 1em;
+	
 }
 
 
@@ -83,29 +83,31 @@ p {
 
 .header-image-container {
     position: relative;
-	height: 50%;
+	height: 100%;
+
+	img{
+		filter: brightness(50%);
+	}
 	
 	.header-overlay {
 		position: absolute;
-		top: 60%;
+		top: 50%;
 		left: 50%;
+		width: 100%;
 		transform: translate(-50%, -50%);
 		text-align: center;
 		color: #fff;
-		background: rgba(0, 0, 0, 0.5);
 		padding: 1em 2em 2em;
 		border-radius: 10px;
 
 		h1{
 			font-size: 4.2em;
 			margin: 0;
-			white-space: nowrap;
 			padding: 0.5em 0;
 		}
 
 		p{
 			font-size: 1.2em;
-    		padding: 0;
 			margin-top: 0;
 			padding: 0 2em ;
 		}
@@ -227,13 +229,65 @@ p {
 
 //Responsivitet Header med billede og text
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
 
 	.header-image-container {
 		
 		.header-overlay {
 			h1 {
-				font-size: 2.5em;
+				font-size: 3.2em;
+			}
+
+			p {
+				font-size: 1em;
+			}
+		}
+	}
+}
+
+
+
+@media screen and (max-width: 750px) {
+
+	.header-image-container {
+
+		.header-overlay {
+			padding: 1em 1em 2em 1em ;
+			
+			h1 {
+				font-size: 2.8em;
+			}
+
+			p {
+				font-size: 1em;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+
+	.header-image-container {
+		
+		.header-overlay {
+			h1 {
+				font-size: 2.2em;
+			}
+
+			p {
+				font-size: 1em;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 425px) {
+
+	.header-image-container {
+		
+		.header-overlay {
+			h1 {
+				font-size: 1.8em;
 			}
 
 			p {
