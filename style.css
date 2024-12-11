@@ -1286,6 +1286,7 @@ p {
     background-color: #fff;
     border: none;
     transition: 0.3s ease;
+    padding-bottom: 1.1em;
   }
   .main-navigation button:hover {
     scale: 1.1;
@@ -1302,12 +1303,16 @@ p {
   .main-navigation ul {
     display: none;
     flex-direction: column;
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
-    width: 25%; /* Adjust width to 100% */
+    width: 35%; /* Adjust width to 100% */
     right: 0;
     z-index: 1000;
     padding: 1em 0;
+    align-items: center;
+  }
+  .main-navigation ul a {
+    color: #fff;
   }
   .main-navigation.toggled ul {
     display: flex; /* Show menu items when toggled */
@@ -1322,9 +1327,11 @@ p {
     width: 100%;
     box-shadow: none;
     padding-left: 1em;
+    background-color: rgba(0, 0, 0, 0);
   }
   .main-navigation.toggled ul ul a {
     font-style: italic;
+    color: #fff;
   }
 }
 @media screen and (min-width: 901px) {
@@ -1355,4 +1362,28 @@ p {
 .post-navigation .nav-next {
   text-align: end;
   flex: 1 0 50%;
+}
+
+@media screen and (max-width: 600px) {
+  #site-navigation {
+    display: flex;
+    flex-direction: column;
+  }
+  #primary-menu {
+    align-content: center;
+  }
+  .menu-toggle {
+    display: flex;
+    margin: 0 auto;
+  }
+  .main-navigation ul {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    width: 100%;
+    padding: 1em 0;
+    align-items: center;
+    padding-left: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
