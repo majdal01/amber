@@ -1226,7 +1226,7 @@ p {
   justify-content: flex-end;
 }
 .main-navigation ul ul {
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   float: left;
   position: absolute;
@@ -1244,6 +1244,7 @@ p {
 }
 .main-navigation ul ul a {
   width: 110px;
+  color: #fff;
 }
 .main-navigation ul ul :hover > a,
 .main-navigation ul ul .focus > a {

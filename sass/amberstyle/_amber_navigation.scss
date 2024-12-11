@@ -12,7 +12,7 @@
         justify-content: flex-end;
 
 		ul {
-			background-color: $color__background-screen;
+			background-color: rgba(0, 0, 0, 0.7);
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
 			position: absolute;
@@ -36,6 +36,7 @@
 
 			a {
 				width: 110px;
+				color: $color__background-screen;
 			}
 
 			:hover > a,
