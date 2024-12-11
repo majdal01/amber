@@ -1122,7 +1122,7 @@ p {
 /* Forside sektion med lille galleri */
 .small-gallery-container {
   background-color: #808469;
-  padding: 6em 0 4em 0;
+  padding: 6em 1em 4em 0;
   display: flex;
 }
 .small-gallery-container .small-gallery-box {
@@ -1181,6 +1181,21 @@ p {
   }
   .header-image-container .header-overlay p {
     font-size: 1em;
+  }
+}
+@media screen and (max-width: 900px) {
+  h2 {
+    font-size: 2.5em;
+  }
+  .small-gallery-container {
+    flex-direction: column;
+  }
+  .box-text-wrapper {
+    display: flex;
+    padding-bottom: 2em;
+  }
+  .box-text-wrapper .small-gallery-box {
+    width: 40%;
   }
 }
 @media screen and (max-width: 750px) {
