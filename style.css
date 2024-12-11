@@ -1304,12 +1304,16 @@ p {
     flex-direction: column;
     background-color: #fff;
     position: absolute;
-    width: 30%; /* Adjust width to 100% */
+    width: 25%; /* Adjust width to 100% */
     right: 0;
     z-index: 1000;
+    padding: 1em 0;
   }
   .main-navigation.toggled ul {
     display: flex; /* Show menu items when toggled */
+  }
+  .main-navigation.toggled > a {
+    font-weight: 800 !important;
   }
   .main-navigation.toggled ul ul {
     display: flex;
@@ -1317,6 +1321,18 @@ p {
     position: static;
     width: 100%;
     box-shadow: none;
+    padding-left: 1em;
+  }
+  .main-navigation.toggled ul ul a {
+    font-style: italic;
+  }
+}
+@media screen and (min-width: 901px) {
+  .main-navigation ul {
+    display: flex !important;
+  }
+  .menu-toggle {
+    display: none;
   }
 }
 .site-main .comment-navigation,

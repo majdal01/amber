@@ -87,7 +87,7 @@
 @media screen and (max-width: 900px) {
 
 	.main-navigation button {
-        background-color: #fff;
+        background-color: $color__background-screen;
         border: none;
         transition: 0.3s ease;
         &:hover {
@@ -110,13 +110,19 @@
         flex-direction: column;
         background-color: $color__background-screen;
         position: absolute;
-        width: 30%; /* Adjust width to 100% */
+        width: 25%; /* Adjust width to 100% */
         right: 0;
         z-index: 1000;
+		padding: 1em 0;
     }
 
     .main-navigation.toggled ul {
 		display: flex; /* Show menu items when toggled */
+
+	}
+
+	.main-navigation.toggled > a {
+		font-weight: 800 !important;
 	}
     
 	.main-navigation.toggled ul ul {
@@ -125,6 +131,21 @@
         position: static;
         width: 100%;
 		box-shadow: none;
+		padding-left: 1em;
+
+		a {
+			font-style: italic;
+		}
+    }
+}
+
+@media screen and (min-width: 901px) {
+    .main-navigation ul {
+        display: flex !important; 
+    }
+
+    .menu-toggle {
+        display: none; 
     }
 }
 
