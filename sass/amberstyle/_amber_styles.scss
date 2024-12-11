@@ -42,9 +42,7 @@ p {
 	max-width: 1280px;
 }
 
-.site-main, .site-content {
-	
-}
+
 
 
 //***********************************************/ 
@@ -96,7 +94,7 @@ p {
 		width: 100%;
 		transform: translate(-50%, -50%);
 		text-align: center;
-		color: #fff;
+		color: $color__background-screen;
 		padding: 1em 2em 2em;
 		border-radius: 10px;
 

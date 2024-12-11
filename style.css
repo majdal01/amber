@@ -1282,15 +1282,41 @@ p {
 }
 
 @media screen and (max-width: 900px) {
+  .main-navigation button {
+    background-color: #fff;
+    border: none;
+    transition: 0.3s ease;
+  }
+  .main-navigation button:hover {
+    scale: 1.1;
+  }
+  .main-navigation button .fa-bars {
+    font-size: 1.8em;
+  }
   .menu-toggle {
     display: block;
+    position: relative;
+    margin-left: auto;
+    margin-top: 0.5em;
   }
   .main-navigation ul {
     display: none;
     flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    width: 30%; /* Adjust width to 100% */
+    right: 0;
+    z-index: 1000;
   }
   .main-navigation.toggled ul {
     display: flex; /* Show menu items when toggled */
+  }
+  .main-navigation.toggled ul ul {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    width: 100%;
+    box-shadow: none;
   }
 }
 .site-main .comment-navigation,

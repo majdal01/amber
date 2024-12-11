@@ -86,17 +86,45 @@
 
 @media screen and (max-width: 900px) {
 
-	.menu-toggle {
-		display: block;
-	}
+	.main-navigation button {
+        background-color: #fff;
+        border: none;
+        transition: 0.3s ease;
+        &:hover {
+            scale: 1.1;
+        }
+        .fa-bars {
+            font-size: 1.8em;
+        }
+    }
 
-	.main-navigation ul {
-		display: none;
-		flex-direction: column;
-	}
+    .menu-toggle {
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-top: 0.5em;
+    }
 
-	.main-navigation.toggled ul {
-        display: flex; /* Show menu items when toggled */
+    .main-navigation ul {
+        display: none;
+        flex-direction: column;
+        background-color: $color__background-screen;
+        position: absolute;
+        width: 30%; /* Adjust width to 100% */
+        right: 0;
+        z-index: 1000;
+    }
+
+    .main-navigation.toggled ul {
+		display: flex; /* Show menu items when toggled */
+	}
+    
+	.main-navigation.toggled ul ul {
+        display: flex; 
+        flex-direction: column;
+        position: static;
+        width: 100%;
+		box-shadow: none;
     }
 }
 
