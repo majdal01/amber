@@ -156,7 +156,7 @@ function amber_scripts() {
 add_action( 'wp_enqueue_scripts', 'amber_scripts' ); // Når WordPress indlæser scripts og styles, så skal den bruge funktionen amber_scripts
 
 
-
+/* Den her er måske ikke nødvendig, fordi Wordpress automatisk sætter front-page ind som default
 // Opretter en Home page, hvis den ikke allerede er sat og sætter den som front page
 function amber_setup_front_page() {
     // Check if the front page is already set
@@ -178,6 +178,63 @@ function amber_setup_front_page() {
     }
 }
 add_action( 'after_switch_theme', 'amber_setup_front_page' );
+*/
+
+//Tilføjet en side og tildeler page-gallery.php som template
+
+function amber_create_gallery_page() {
+    // Check if the page already exists
+    $gallery_page = get_page_by_title( 'Gallery' );
+
+    if ( ! $gallery_page ) {
+        // Insert the page if it does not exist
+        $gallery_page_id = wp_insert_post( array(
+            'post_title'    => 'Gallery',
+            'post_type'     => 'page',
+            'post_status'   => 'publish',
+        ) );
+
+        // Assign the "Gallery" template to the page
+        update_post_meta( $gallery_page_id, '_wp_page_template', 'page-gallery.php' );
+    }
+}
+add_action( 'after_switch_theme', 'amber_create_gallery_page' );
+
+//eller både front-page og page-gallery
+/*
+function amber_setup_default_pages() {
+
+    // 1️⃣ Set the Home Page as the Front Page
+    if ( 'page' !== get_option( 'show_on_front' ) ) {
+        // Create the homepage if it doesn't exist
+        $homepage_id = wp_insert_post( array(
+            'post_title'     => 'Home',
+            'post_type'      => 'page',
+            'post_status'    => 'publish',
+        ) );
+
+        // Set the homepage as the front page
+        update_option( 'page_on_front', $homepage_id );
+        update_option( 'show_on_front', 'page' );
+    }
+
+    // 2️⃣ Create and Assign the Gallery Page
+    $gallery_page = get_page_by_title( 'Gallery' );
+
+    if ( ! $gallery_page ) {
+        // Insert the page if it does not exist
+        $gallery_page_id = wp_insert_post( array(
+            'post_title'    => 'Gallery',
+            'post_type'     => 'page',
+            'post_status'   => 'publish',
+        ) );
+
+        // Assign the "Gallery" template to the page
+        update_post_meta( $gallery_page_id, '_wp_page_template', 'page-gallery.php' );
+    }
+}
+add_action( 'after_switch_theme', 'amber_setup_default_pages' );
+*/
 
 
 //Sørger for kun at vise redigeringsmuligheder der passer til den specifikke side
