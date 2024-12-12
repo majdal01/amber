@@ -274,9 +274,9 @@ p {
 	justify-content: center;
 	align-content: center;
 	padding: 6em 1em;
+	gap: 1em;
 
 	img {
-	
 		width: 100%;
 		height: 300px;
 		
@@ -401,6 +401,13 @@ p {
 		}
 	}
 
+	.gallery-header {
+	
+		.gallery-header-img {
+			height: 300px;
+		}
+	}
+
 	
 }
 
@@ -441,6 +448,17 @@ p {
 			flex-direction: column;
 		}
 	}
+
+	.large-gallery-container {
+		padding-top: 2em;
+	
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	
+	}
+	
 	
 }
 
@@ -453,6 +471,13 @@ p {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+		}
+	}
+
+	.gallery-header {
+	
+		.gallery-header-img {
+			height: 200px;
 		}
 	}
 	

@@ -34,11 +34,15 @@ get_header();
         $default_images = array(
             get_template_directory_uri() . '/img/default3.jpg',
             get_template_directory_uri() . '/img/default1.png',
+            get_template_directory_uri() . '/img/default4.png', 
+            get_template_directory_uri() . '/img/default5.jpg',
             get_template_directory_uri() . '/img/default2.jpg',
-            get_template_directory_uri() . '/img/default4.png'
+            get_template_directory_uri() . '/img/default6.jpg',
+            get_template_directory_uri() . '/img/default7.jpg',
+            get_template_directory_uri() . '/img/default8.jpg'
         );
 
-        for ( $i = 1; $i <= 4; $i++ ) : ?>
+        for ( $i = 1; $i <= 8; $i++ ) : ?>
             <div class="large-gallery-item">
                 <img src="<?php echo esc_url( get_theme_mod( "amber_large_gallery_image_$i", $default_images[$i - 1] ) ); ?>" alt="Gallery Image <?php echo $i; ?>">
             </div>

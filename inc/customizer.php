@@ -432,12 +432,16 @@ function amber_customize_register( $wp_customize ) {
         $default_images = array(
             get_template_directory_uri() . '/img/default3.jpg',
             get_template_directory_uri() . '/img/default1.png',
+            get_template_directory_uri() . '/img/default4.png',
+            get_template_directory_uri() . '/img/default5.jpg',
             get_template_directory_uri() . '/img/default2.jpg',
-            get_template_directory_uri() . '/img/default4.png'
+            get_template_directory_uri() . '/img/default6.jpg',
+            get_template_directory_uri() . '/img/default7.jpg',
+            get_template_directory_uri() . '/img/default8.jpg'
         );
 
             // Add settings and controls for each gallery image
-            for ( $i = 1; $i <= 4; $i++ ) {
+            for ( $i = 1; $i <= 8; $i++ ) {
             // Image setting
             $wp_customize->add_setting( "amber_large_gallery_image_$i" , array(
                 'default'   => $default_images[$i - 1], // Default image URL

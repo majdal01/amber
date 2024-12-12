@@ -1233,6 +1233,7 @@ p {
   justify-content: center;
   align-content: center;
   padding: 6em 1em;
+  gap: 1em;
 }
 .large-gallery-container img {
   width: 100%;
@@ -1304,6 +1305,9 @@ p {
     width: 100%;
     padding-right: 0em;
   }
+  .gallery-header .gallery-header-img {
+    height: 300px;
+  }
 }
 @media screen and (max-width: 425px) {
   .site-branding .site-title {
@@ -1325,6 +1329,13 @@ p {
     display: flex;
     flex-direction: column;
   }
+  .large-gallery-container {
+    padding-top: 2em;
+  }
+  .large-gallery-container img {
+    width: 100%;
+    height: 100%;
+  }
 }
 @media screen and (max-width: 375px) {
   .header-image-container {
@@ -1335,6 +1346,9 @@ p {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .gallery-header .gallery-header-img {
+    height: 200px;
   }
 }
 /*--------------------------------------------------------------
