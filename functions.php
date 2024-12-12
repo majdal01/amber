@@ -180,6 +180,18 @@ function amber_setup_front_page() {
 add_action( 'after_switch_theme', 'amber_setup_front_page' );
 
 
+//Sørger for kun at vise redigeringsmuligheder der passer til den specifikke side
+
+function is_front_page_template() {
+    return is_front_page();
+}
+
+function is_gallery_page() {
+	return is_page_template('page-gallery.php');
+}
+
+
+
 /**
  * Implement the Custom Header feature.
  */

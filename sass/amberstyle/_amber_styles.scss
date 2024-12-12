@@ -249,6 +249,38 @@ p {
 }
 
 
+//***********************************************/ 
+/* Galleri side */
+
+.gallery-container {
+    padding: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+    gap: 15px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
 
 //***********************************************/ 
 //***********************************************/ 

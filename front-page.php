@@ -10,23 +10,23 @@ get_header();
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
 
-     <!--IMG HEADER-->
-     <div class="header-image-container">
+        <!--IMG HEADER-->
+        <div class="header-image-container">
 
-<?php if ( get_header_image() ) : ?>
-    <img src="<?php header_image(); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-<?php else : ?>
-    <img src="<?php echo esc_url( get_template_directory_uri() . '/img/default-header-img.png' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-<?php endif; ?>
+            <?php if ( get_header_image() ) : ?>
+                <img src="<?php header_image(); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+            <?php else : ?>
+                <img src="<?php echo esc_url( get_template_directory_uri() . '/img/default-header-img.png' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+            <?php endif; ?>
 
-<div class="header-overlay">
-    <h1><?php echo get_theme_mod( 'amber_header_h1', __( 'Welcome to My Site', 'amber' ) ); ?></h1>
-    <p><?php echo get_theme_mod( 'amber_header_p', __( 'This is a customizable paragraph.', 'amber' ) ); ?></p>
-    <a href="<?php echo esc_url( get_theme_mod( 'amber_header_button_url', '#' ) ); ?>" class="header-button">
-        <?php echo get_theme_mod( 'amber_header_button_text', __( 'Click Me', 'amber' ) ); ?>
-    </a>
-</div>
-</div>
+            <div class="header-overlay">
+                <h1><?php echo get_theme_mod( 'amber_header_h1', __( 'Welcome to My Site', 'amber' ) ); ?></h1>
+                <p><?php echo get_theme_mod( 'amber_header_p', __( 'This is a customizable paragraph.', 'amber' ) ); ?></p>
+                <a href="<?php echo esc_url( get_theme_mod( 'amber_header_button_url', '#' ) ); ?>" class="header-button">
+                    <?php echo get_theme_mod( 'amber_header_button_text', __( 'Click Me', 'amber' ) ); ?>
+                </a>
+            </div>
+        </div>
 
     <!------------------------------------------------------------>
     <!-- Forside sektion til ikoner. Copilot hjalp med at få den på plads -->
