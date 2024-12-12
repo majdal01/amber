@@ -300,6 +300,67 @@ function amber_customize_register( $wp_customize ) {
                 'settings'   => "amber_gallery_image_$i",
             ) ) );
         }
+
+        //***********************************************************/
+        // Section til qoute på forsiden. 
+
+        // Add section for quote content
+    $wp_customize->add_section( 'amber_quote_content' , array(
+        'title'      => __( 'Quote Content', 'amber' ),
+        'priority'   => 30,
+    ) );
+
+    // Add setting for quote h2
+    $wp_customize->add_setting( 'amber_quote_h2' , array(
+        'default'   => __( 'Art is everything to me.', 'amber' ),
+        'transport' => 'refresh',
+    ) );
+
+    // Add control for quote h2
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'amber_quote_h2', array(
+        'label'      => __( 'Quote H2', 'amber' ),
+        'section'    => 'amber_quote_content',
+        'settings'   => 'amber_quote_h2',
+    ) ) );
+
+    // Add setting for quote paragraph
+    $wp_customize->add_setting( 'amber_quote_p' , array(
+        'default'   => __( '- John Doe', 'amber' ),
+        'transport' => 'refresh',
+    ) );
+
+    // Add control for quote paragraph
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'amber_quote_p', array(
+        'label'      => __( 'Quote Paragraph', 'amber' ),
+        'section'    => 'amber_quote_content',
+        'settings'   => 'amber_quote_p',
+    ) ) );
+
+    // Add setting for quote button text
+    $wp_customize->add_setting( 'amber_quote_button_text' , array(
+        'default'   => __( 'About Me', 'amber' ),
+        'transport' => 'refresh',
+    ) );
+
+    // Add control for quote button text
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'amber_quote_button_text', array(
+        'label'      => __( 'Quote Button Text', 'amber' ),
+        'section'    => 'amber_quote_content',
+        'settings'   => 'amber_quote_button_text',
+    ) ) );
+
+    // Add setting for quote button URL
+    $wp_customize->add_setting( 'amber_quote_button_url' , array(
+        'default'   => '#',
+        'transport' => 'refresh',
+    ) );
+
+    // Add control for quote button URL
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'amber_quote_button_url', array(
+        'label'      => __( 'Quote Button URL', 'amber' ),
+        'section'    => 'amber_quote_content',
+        'settings'   => 'amber_quote_button_url',
+    ) ) );
 }
 
 

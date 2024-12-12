@@ -41,3 +41,23 @@
 		
 	}
 }
+
+@mixin site-button {
+	display: inline-block;
+	font-family: $font__main;
+    padding: 0.3em 3em;
+    font-size: 1.2em;
+	border: 4px solid $color__background-darkgreen;
+	color: $color__text-screen;
+    text-decoration: none;
+    border-radius: 50px;
+	width: auto;
+	margin: 0 auto;
+
+	&:hover {
+		
+		background-color: $color__background-button-hover;
+		color: $color__text-button-hover;
+		
+	}
+}

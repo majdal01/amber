@@ -219,6 +219,35 @@ p {
 }
 
 
+//***********************************************/ 
+/* Forside qoute */
+
+.quote-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 800px;
+	margin: 4em auto;
+	padding: 0 2em;
+
+	.fa-quote-left {
+		font-size: 4em;
+	}
+
+	h2 {
+		margin: 0;
+		padding-left: 1em;
+	}
+
+	p {
+		text-align: right;
+	}
+
+	a {
+		@include site-button();
+	}
+}
+
 
 
 //***********************************************/ 

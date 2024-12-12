@@ -1175,6 +1175,42 @@ p {
      object-fit: cover;
 }
 
+/* Forside qoute */
+.quote-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  margin: 4em auto;
+  padding: 0 2em;
+}
+.quote-container .fa-quote-left {
+  font-size: 4em;
+}
+.quote-container h2 {
+  margin: 0;
+  padding-left: 1em;
+}
+.quote-container p {
+  text-align: right;
+}
+.quote-container a {
+  display: inline-block;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  padding: 0.3em 3em;
+  font-size: 1.2em;
+  border: 4px solid #4C563B;
+  color: #010101;
+  text-decoration: none;
+  border-radius: 50px;
+  width: auto;
+  margin: 0 auto;
+}
+.quote-container a:hover {
+  background-color: #4C563B;
+  color: #fff;
+}
+
 @media screen and (max-width: 950px) {
   .header-image-container .header-overlay h1 {
     font-size: 3.2em;

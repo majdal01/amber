@@ -86,18 +86,17 @@ get_header();
         </div>
 
         <div class="line"></div>
-
-        <?php
-        if ( have_posts() ) :
-            while ( have_posts() ) :
-                the_post();
-                get_template_part( 'template-parts/content', 'page' );
-            endwhile;
-        else :
-            get_template_part( 'template-parts/content', 'none' );
-        endif;
-        ?>
-
+        
+        <div class="quote-container">
+            <i class="fa-solid fa-quote-left"></i>
+            <h2><?php echo get_theme_mod( 'amber_quote_h2', __( 'Art is everything to me.', 'amber' ) ); ?></h2>
+            <p><?php echo get_theme_mod( 'amber_quote_p', __( '- John Doe', 'amber') ) ?></p>
+            <a href="
+                <?php echo esc_url( get_theme_mod( 'amber_quote_button_url', '#' ) ); ?>" class="site-button">
+                <?php echo get_theme_mod( 'amber_quote_button_text', __( 'About Me', 'amber' ) ); ?>
+            </a>
+        </div>
+        
     </main><!-- #main -->
 </div><!-- #primary -->
 
