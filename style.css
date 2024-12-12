@@ -1242,6 +1242,12 @@ p {
   }
 }
 @media screen and (max-width: 425px) {
+  .site-branding .site-title {
+    font-size: 1em;
+  }
+  .site-branding .site-description {
+    font-size: 0.8em;
+  }
   .header-image-container .header-overlay h1 {
     font-size: 1.8em;
   }
