@@ -426,6 +426,7 @@ function amber_customize_register( $wp_customize ) {
         $wp_customize->add_section( 'amber_large_gallery' , array(
             'title'      => __( 'Amber Large Gallery images', 'amber' ),
             'priority'   => 30,
+            'active_callback' => 'is_gallery_page',
         ) );
 
         // Define the default image URLs
@@ -453,7 +454,7 @@ function amber_customize_register( $wp_customize ) {
                 'label'      => __( "Gallery Image $i", 'amber' ),
                 'section'    => 'amber_large_gallery',
                 'settings'   => "amber_large_gallery_image_$i",
-                'active_callback' => 'is_front_page_template',
+                'active_callback' => 'is_gallery_page',
             ) ) );
         }
 
