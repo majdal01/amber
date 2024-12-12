@@ -1096,7 +1096,7 @@ p {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  padding: 3em 0;
+  padding: 4em 0 3em 0;
   text-align: center;
 }
 .front-page-icons .icon-box {
@@ -1181,7 +1181,7 @@ p {
   flex-direction: column;
   width: 100%;
   max-width: 800px;
-  margin: 4em auto;
+  margin: 6em auto;
   padding: 0 2em;
 }
 .quote-container .fa-quote-left {
