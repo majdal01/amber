@@ -8,35 +8,46 @@ get_header();
 
 ?>
 
-<main id="site-content" role="main">
+<div id="primary" class="content-area">
+    <main id="main" class="site-main">
 
-    <header class="page-header">
-        <?php if ( get_theme_mod( 'amber_gallery_header_image' ) ) : ?>
-            <img src="<?php echo esc_url( get_theme_mod( 'amber_gallery_header_image' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-        <?php endif; ?>
-        <h1 class="page-title"><?php the_title(); ?></h1>
+    <header class="gallery-header">
+        <div class="gallery-header-img">
+            <?php 
+            $header_image = get_theme_mod( 'amber_gallery_header_image' );
+            if ( $header_image ) : ?>
+                <img src="<?php echo esc_url( $header_image ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+            <?php else : ?>
+                <img src="<?php echo esc_url( get_template_directory_uri() . '/img/default-gallery-header.jpg' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+            <?php endif; ?>
+        </div>
+        <h1 class="page-title"><?php echo esc_html( get_theme_mod( 'amber_gallery_page_title', __( 'Gallery', 'amber' ) ) ); ?></h1>
+
     </header>
 
-    <section class="gallery-container">
-        <?php 
-        // Get images attached to the page via ACF, Custom Fields, or Media Library
-        $gallery_images = get_attached_media('image', $post->ID); 
+    <div class="line"></div>
 
-        if ($gallery_images) :
-            echo '<div class="gallery-grid">';
-            foreach ($gallery_images as $image) :
-                $image_url = wp_get_attachment_image_src($image->ID, 'large');
-        ?>
-            <div class="gallery-item">
-                <img src="<?php echo esc_url($image_url[0]); ?>" alt="<?php echo esc_attr(get_the_title($image->ID)); ?>">
+    <div class="large-gallery-container">
+
+        <?php
+        // Define the default image URLs
+        $default_images = array(
+            get_template_directory_uri() . '/img/default3.jpg',
+            get_template_directory_uri() . '/img/default1.png',
+            get_template_directory_uri() . '/img/default2.jpg',
+            get_template_directory_uri() . '/img/default4.png'
+        );
+
+        for ( $i = 1; $i <= 4; $i++ ) : ?>
+            <div class="large-gallery-item">
+                <img src="<?php echo esc_url( get_theme_mod( "amber_large_gallery_image_$i", $default_images[$i - 1] ) ); ?>" alt="Gallery Image <?php echo $i; ?>">
             </div>
-        <?php 
-            endforeach; 
-            echo '</div>';
-        endif;
-        ?>
-    </section>
+        <?php endfor; ?>
 
-</main>
+    </div>
+
+
+    </main><!-- #main -->
+</div><!-- #primary -->
 
 <?php get_footer(); ?>

@@ -287,7 +287,7 @@ function amber_customize_register( $wp_customize ) {
             'active_callback' => 'is_front_page_template',
         ) ) );
         
-        // Add section for gallery images
+        // Add section for small gallery images
         $wp_customize->add_section( 'amber_gallery' , array(
             'title'      => __( 'Amber Small Gallery images', 'amber' ),
             'priority'   => 30,
@@ -384,12 +384,20 @@ function amber_customize_register( $wp_customize ) {
         ) ) );
 
 
+
+
+
+
+
+
+
+
         //***********************************************************/
         // Customizable content page gallery. 
 
         // Add section for gallery header content
         $wp_customize->add_section( 'amber_gallery_header' , array(
-            'title'      => __( 'Amber Gallery Page', 'amber' ),
+            'title'      => __( 'Amber Gallery header', 'amber' ),
             'priority'   => 30,
             'active_callback' => 'is_gallery_page',
         ) );
@@ -408,10 +416,15 @@ function amber_customize_register( $wp_customize ) {
             'active_callback' => 'is_gallery_page',
         ) ) );
         
+
+
+
+
+
         //***********************************************************/
-        // Add section for gallery images
-        $wp_customize->add_section( 'amber_gallery' , array(
-            'title'      => __( 'Amber Gallery images', 'amber' ),
+        // Add section for large gallery images
+        $wp_customize->add_section( 'amber_large_gallery' , array(
+            'title'      => __( 'Amber Large Gallery images', 'amber' ),
             'priority'   => 30,
         ) );
 
@@ -423,21 +436,23 @@ function amber_customize_register( $wp_customize ) {
             get_template_directory_uri() . '/img/default4.png'
         );
 
-        // Add settings and controls for each gallery image
-        for ( $i = 1; $i <= 4; $i++ ) {
+            // Add settings and controls for each gallery image
+            for ( $i = 1; $i <= 4; $i++ ) {
             // Image setting
-            $wp_customize->add_setting( "amber_gallery_image_$i" , array(
+            $wp_customize->add_setting( "amber_large_gallery_image_$i" , array(
                 'default'   => $default_images[$i - 1], // Default image URL
                 'transport' => 'refresh',
             ) );
 
             // Image control
-            $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, "amber_gallery_image_$i", array(
+            $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, "amber_large_gallery_image_$i", array(
                 'label'      => __( "Gallery Image $i", 'amber' ),
-                'section'    => 'amber_gallery',
-                'settings'   => "amber_gallery_image_$i",
+                'section'    => 'amber_large_gallery',
+                'settings'   => "amber_large_gallery_image_$i",
+                'active_callback' => 'is_front_page_template',
             ) ) );
         }
+
 }
 
 
