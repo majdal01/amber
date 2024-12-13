@@ -146,7 +146,7 @@ function amber_customize_register( $wp_customize ) {
             'active_callback' => 'is_front_page_template',
         ) ) );
     
-            // Color setting
+        // Color setting
         $wp_customize->add_setting( "amber_icon_color_$i" , array(
             'default'   => '#000000', // Default color
             'transport' => 'refresh',
@@ -634,14 +634,27 @@ function amber_customize_register( $wp_customize ) {
             'active_callback' => 'is_about_page',
         ) );
 
+        // Color ændring af funfacts background color
+        $wp_customize->add_setting( 'amber_funfacts_bg_color' , array(
+            'default'   => '#4C563B', // Default color
+            'transport' => 'refresh',
+        ) );
+    
+        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'amber_funfacts_bg_color', array(
+            'label'      => __( 'Container Background Color', 'amber' ),
+            'section'    => 'amber_funfacts',
+            'settings'   => 'amber_funfacts_bg_color',
+            'active_callback' => 'is_about_page',
+        ) ) );
+
         // Add setting for fun facts heading
         $wp_customize->add_setting( 'amber_funfacts_h2' , array(
             'default'   => __( 'Fun facts', 'amber' ),
             'transport' => 'refresh',
         ) );
 
-        // Add control for fun facts heading
-        $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'amber_funfacts_h2', array(
+         // Add control for fun facts heading
+         $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'amber_funfacts_h2', array(
             'label'      => __( 'Fun Facts Heading', 'amber' ),
             'section'    => 'amber_funfacts',
             'settings'   => 'amber_funfacts_h2',
@@ -650,7 +663,7 @@ function amber_customize_register( $wp_customize ) {
 
         // Add setting for fun facts heading color
         $wp_customize->add_setting( 'amber_funfacts_h2_color' , array(
-            'default'   => '#000000', // Default color
+            'default'   => '#ffffff', // Default color
             'transport' => 'refresh',
         ) );
 
@@ -664,11 +677,11 @@ function amber_customize_register( $wp_customize ) {
 
         // Add settings and controls for each fun fact
         for ( $i = 1; $i <= 3; $i++ ) {
-            // Fun fact setting
-            $wp_customize->add_setting( "amber_funfact_$i" , array(
-                'default'   => __( "Fun fact $i", 'amber' ),
-                'transport' => 'refresh',
-            ) );
+        // Fun fact setting
+        $wp_customize->add_setting( "amber_funfact_$i" , array(
+            'default'   => __( "Fun fact $i", 'amber' ),
+            'transport' => 'refresh',
+        ) );
 
         // Fun fact control
         $wp_customize->add_control( new WP_Customize_Control( $wp_customize, "amber_funfact_$i", array(
@@ -677,8 +690,21 @@ function amber_customize_register( $wp_customize ) {
             'settings'   => "amber_funfact_$i",
             'active_callback' => 'is_about_page',
         ) ) );
+        }
 
-    }
+        // Add setting for fun facts color
+        $wp_customize->add_setting( "amber_funfact_color_$i" , array(
+            'default'   => '#ffffff', // Default color
+            'transport' => 'refresh',
+        ) );
+
+        // Add control for fun facts color
+        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, "amber_funfact_color_$i", array(
+            'label'      => __( "Fun Fact Color $i", 'amber' ),
+            'section'    => 'amber_funfacts',
+            'settings'   => "amber_funfact_color_$i",
+            'active_callback' => 'is_about_page',
+        ) ) );
 }
 
 add_action( 'customize_register', 'amber_customize_register' );

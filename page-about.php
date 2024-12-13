@@ -59,9 +59,9 @@ get_header();
 
 
     <section class="funfacts-wrapper">
-        <h2 style="color: <?php echo esc_attr( get_theme_mod( 'amber_funfacts_h2_color', '#000000' ) ); ?>;"><?php echo esc_html( get_theme_mod( 'amber_funfacts_h2', 'Fun facts' ) ); ?></h2>
+        <h2 style="color: <?php echo esc_attr( get_theme_mod( 'amber_funfacts_h2_color', '#fff' ) ); ?>;"><?php echo esc_html( get_theme_mod( 'amber_funfacts_h2', 'Fun facts' ) ); ?></h2>
         
-        <div>
+        <div class="funfacts-style">
 
             <?php for ( $i = 1; $i <= 3; $i++ ) : ?>
                 <h3><?php echo esc_html( get_theme_mod( "amber_funfact_$i", "Fun fact $i" ) ); ?></h3>

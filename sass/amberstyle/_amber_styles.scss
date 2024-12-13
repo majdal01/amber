@@ -354,6 +354,24 @@ p {
 	}
 }
 
+.funfacts-wrapper {
+	background-color: $color__background-darkgreen;
+	color: $color__background-screen;
+	padding: 1em 2em;
+	margin-top: 4em;
+
+	h2 {
+		text-align: center;
+		color: $color__background-screen;
+	}
+
+	.funfacts-style {
+		display: flex;
+		justify-content: space-around;
+		padding: 2em 1em;
+	}
+}
+
 
 
 
