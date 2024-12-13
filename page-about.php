@@ -34,16 +34,28 @@ get_header();
                 <h2 style="color: <?php echo esc_attr( get_theme_mod( 'amber_about_h2_color', '#000000' ) ); ?>;"><?php echo esc_html( get_theme_mod( 'amber_about_h2', 'About me' ) ); ?></h2>
             </div>
 
-            <div class="about-text">
-                <h2>Lorem Ipsum</h2>
-                <p style="color: <?php echo esc_attr( get_theme_mod( 'amber_about_p_color', '#000000' ) ); ?>;">
-                    <?php echo wp_kses_post( nl2br( get_theme_mod( 'amber_about_p', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.' ) ) ); ?>
+            <section class="about-text">
+                <h2 style="color: <?php echo esc_attr( get_theme_mod( 'amber_about__me_h2_color', '#000000' ) ); ?>;"><?php echo esc_html( get_theme_mod( 'amber_about_me_h2', 'About me' ) ); ?></h2>
+                <p style="color: <?php echo esc_attr( get_theme_mod( 'amber_about_me_p_color', '#000000' ) ); ?>;">
+                <?php echo wp_kses_post( nl2br( get_theme_mod( 'amber_about_me_p', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.' ) ) ); ?>
                 </p>
-            </div>
+            </section>
 
         </div>
 
     </div>
+
+    <section class="about-profil-wrapper">
+                <p style="color: <?php echo esc_attr( get_theme_mod( 'amber_about_profil_p_color', '#000000' ) ); ?>;">
+                <?php echo wp_kses_post( nl2br( get_theme_mod( 'amber_about_profil_p', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.' ) ) ); ?>
+                </p>
+                <?php 
+                $profile_image = get_theme_mod( 'amber_about_profile_image', get_template_directory_uri() . '/img/default-profil-img.png' );
+                ?>
+                 <img src="<?php echo esc_url( $profile_image ); ?>" alt="Default profilbilledes">
+
+    </section>
+
 
     </main><!-- #main -->
 </div><!-- #primary -->
