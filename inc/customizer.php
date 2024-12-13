@@ -572,12 +572,28 @@ function amber_customize_register( $wp_customize ) {
             'active_callback' => 'is_about_page',
         ) ) );
 
-        //p2
+
+
+
+        // Add section for about profile image and text
+
+        $wp_customize->add_section( 'amber_about_profil' , array(
+            'title'      => __( 'Amber Profil image and text', 'amber' ),
+            'priority'   => 30,
+            'active_callback' => 'is_about_page',
+        ) );
+
+        // Add setting for about profile paragraph
+        $wp_customize->add_setting( 'amber_about_profil_p' , array(
+            'default'   => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br><br> Lorem ipsum dolor sit amet consectetur. Risus mi orci sit et donec senectus libero. Diam egestas viverra hendrerit pretium ac nam viverra ac pretium. Lacus maecenas lorem lacinia dui. Pharetra justo dui rutrum urna porta sed venenatis magna magna. Commodo mi morbi fringilla mauris duis. Morbi tortor viverra auctor dignissim enim sed. Vel aliquet quam duis nam. Mauris commodo sapien est aliquet viverra volutpat dui. Sollicitudin nisi pharetra diam sit lobortis pharetra commodo.', 'amber' ),
+            'transport' => 'refresh',
+        ) );
+
         $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'amber_about_profil_p', array(
             'label'      => __( 'Box Paragraph', 'amber' ),
             'section'    => 'amber_about_profil',
             'settings'   => 'amber_about_profil_p',
-            'type'       => 'textarea', // Change to textarea for multi-line input
+            'type'       => 'textarea', 
             'active_callback' => 'is_about_page',
         ) ) );
 
@@ -593,24 +609,18 @@ function amber_customize_register( $wp_customize ) {
             'active_callback' => 'is_about_page',
         ) ) );
 
-        // Add section for about profile image
-        $wp_customize->add_section( 'amber_about_profile' , array(
-            'title'      => __( 'Amber About Profile', 'amber' ),
-            'priority'   => 30,
-            'active_callback' => 'is_about_page',
-        ) );
 
         // Add setting for about profile image
-        $wp_customize->add_setting( 'amber_about_profile_image' , array(
+        $wp_customize->add_setting( 'amber_about_profil_image' , array(
             'default'   => get_template_directory_uri() . '/img/default-profil-img.png', // Default image URL
             'transport' => 'refresh',
         ) );
 
         // Add control for about profile image
-        $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'amber_about_profile_image', array(
+        $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'amber_about_profil_image', array(
             'label'      => __( 'Profile Image', 'amber' ),
-            'section'    => 'amber_about_profile',
-            'settings'   => 'amber_about_profile_image',
+            'section'    => 'amber_about_profil',
+            'settings'   => 'amber_about_profil_image',
             'active_callback' => 'is_about_page',
         ) ) );
 

@@ -1287,6 +1287,21 @@ p {
   color: #F0D8BE;
 }
 
+.about-profil-wrapper {
+  display: flex;
+  padding: 1em;
+}
+.about-profil-wrapper p {
+  padding: 1em 2em 1em 1.5em;
+  width: 70%;
+}
+.about-profil-wrapper img {
+  width: 30%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 @media screen and (max-width: 950px) {
   .header-image-container .header-overlay h1 {
     font-size: 3.2em;

@@ -47,14 +47,17 @@ get_header();
 
     <section class="about-profil-wrapper">
                 <p style="color: <?php echo esc_attr( get_theme_mod( 'amber_about_profil_p_color', '#000000' ) ); ?>;">
-                <?php echo wp_kses_post( nl2br( get_theme_mod( 'amber_about_profil_p', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.' ) ) ); ?>
+                <?php echo wp_kses_post( nl2br( get_theme_mod( 'amber_about_profil_p', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br><br> Lorem ipsum dolor sit amet consectetur. Risus mi orci sit et donec senectus libero. Diam egestas viverra hendrerit pretium ac nam viverra ac pretium. Lacus maecenas lorem lacinia dui. Pharetra justo dui rutrum urna porta sed venenatis magna magna. Commodo mi morbi fringilla mauris duis. Morbi tortor viverra auctor dignissim enim sed. Vel aliquet quam duis nam. Mauris commodo sapien est aliquet viverra volutpat dui. Sollicitudin nisi pharetra diam sit lobortis pharetra commodo.' ) ) ); ?>
                 </p>
+
                 <?php 
-                $profile_image = get_theme_mod( 'amber_about_profile_image', get_template_directory_uri() . '/img/default-profil-img.png' );
+                $profile_image = get_theme_mod( 'amber_about_profil_image', get_template_directory_uri() . '/img/default-profil-img.png' );
                 ?>
-                 <img src="<?php echo esc_url( $profile_image ); ?>" alt="Default profilbilledes">
+                 <img src="<?php echo esc_url( $profile_image ); ?>" alt="Default profilbillede">
 
     </section>
+
+    
 
 
     </main><!-- #main -->

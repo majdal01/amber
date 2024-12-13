@@ -338,6 +338,22 @@ p {
 	}
 }
 
+.about-profil-wrapper {
+	display: flex;
+	padding: 1em;
+
+	p{
+		padding: 1em 2em 1em 1.5em;
+		width: 70%;
+	}
+
+	img {
+		width: 30%;
+		height: auto;
+		object-fit: contain;
+	}
+}
+
 
 
 
