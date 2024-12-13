@@ -21,7 +21,6 @@ get_header();
             <?php endif; ?>
         </div>
         <h1 class="page-title"><?php echo esc_html( get_theme_mod( 'amber_about_page_title', __( 'About', 'amber' ) ) ); ?></h1>
-
     </header>
 
     <div class="line"></div>
@@ -37,8 +36,9 @@ get_header();
 
             <div class="about-text">
                 <h2>Lorem Ipsum</h2>
-                <p style="color: <?php echo esc_attr( get_theme_mod( 'amber_about_p_color', '#000000' ) ); ?>;"><?php echo wp_kses_post( get_theme_mod( 'amber_about_p', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua <br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.' ) ); ?></p>
-                
+                <p style="color: <?php echo esc_attr( get_theme_mod( 'amber_about_p_color', '#000000' ) ); ?>;">
+                    <?php echo wp_kses_post( nl2br( get_theme_mod( 'amber_about_p', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.' ) ) ); ?>
+                </p>
             </div>
 
         </div>

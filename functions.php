@@ -198,6 +198,13 @@ function is_gallery_page() {
 	return is_page_template('page-gallery.php');
 }
 
+function is_about_page() {
+    return is_page_template('page-about.php');
+}
+
+function is_about_page_template() {
+    return is_page_template('page-about.php');
+}
 
 
 
