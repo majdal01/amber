@@ -295,10 +295,25 @@ p {
 }
 
 
+//***********************************************/ 
+/* About side */
 
+.about-wrapper {
+	display: flex;
 
+	.small-gallery-box {
+		width: 30%;
+	}
 
+	.small-gallery-text {
+		width: 70%;
+		padding: 0 2.5em;
 
+		h2 {
+			margin: 0;
+		}
+	}
+}
 
 
 

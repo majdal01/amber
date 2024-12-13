@@ -1253,6 +1253,21 @@ p {
   height: 300px;
 }
 
+/* About side */
+.about-wrapper {
+  display: flex;
+}
+.about-wrapper .small-gallery-box {
+  width: 30%;
+}
+.about-wrapper .small-gallery-text {
+  width: 70%;
+  padding: 0 2.5em;
+}
+.about-wrapper .small-gallery-text h2 {
+  margin: 0;
+}
+
 @media screen and (max-width: 950px) {
   .header-image-container .header-overlay h1 {
     font-size: 3.2em;
