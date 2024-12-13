@@ -485,6 +485,92 @@ function amber_customize_register( $wp_customize ) {
         ) ) );
         
 
+         // Tilføjet mulighed for at redigere i øverste sektion i about
+         $wp_customize->add_section( 'amber_about_me' , array(
+            'title'      => __( 'Amber about me', 'amber' ),
+            'priority'   => 30,
+        ) );
+
+        // Color ændring af container background color
+        $wp_customize->add_setting( 'amber_about_me_bg_color' , array(
+            'default'   => '#ffffff', // Default color
+            'transport' => 'refresh',
+        ) );
+    
+        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'amber_about_container_bg_color', array(
+            'label'      => __( 'Container Background Color', 'amber' ),
+            'section'    => 'amber_about',
+            'settings'   => 'amber_about_me_bg_color',
+            'active_callback' => 'is_about_page_template',
+        ) ) );
+    
+        // Redigere about me box
+        $wp_customize->add_setting( 'amber_about_me_color' , array(
+            'default'   => '#F0D8BE', // Default color
+            'transport' => 'refresh',
+        ) );
+        
+        // Redigere color about me box
+        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'amber_about_me_color', array(
+            'label'      => __( 'Box Background Color', 'amber' ),
+            'section'    => 'amber_about_me',
+            'settings'   => 'amber_about_me_color',
+            'active_callback' => 'is_about_page_template',
+        ) ) );
+        
+        //Redigere about me h2, p 
+
+        //H2
+        $wp_customize->add_setting( 'amber_about_me_h2' , array(
+            'default'   => __( 'About me', 'amber' ),
+            'transport' => 'refresh',
+        ) );
+        
+        $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'amber_about_me_h2', array(
+            'label'      => __( 'Box Heading', 'amber' ),
+            'section'    => 'amber_about_me',
+            'settings'   => 'amber_about_me_h2',
+            'active_callback' => 'is_about_page_template',
+        ) ) );
+
+        $wp_customize->add_setting( 'amber_about_me_h2_color' , array(
+            'default'   => '#000000', // Default color
+            'transport' => 'refresh',
+        ) );
+    
+        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'amber_about_me_h2_color', array(
+            'label'      => __( 'Heading Color', 'amber' ),
+            'section'    => 'amber_about_me',
+            'settings'   => 'amber_about_me_h2_color',
+            'active_callback' => 'is_about_page_template',
+        ) ) );
+        
+
+        //p
+        $wp_customize->add_setting( 'amber_about_me_p' , array(
+            'default'   => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'amber' ),
+            'transport' => 'refresh',
+        ) );
+    
+        $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'amber_about_me_p', array(
+            'label'      => __( 'Box Paragraph', 'amber' ),
+            'section'    => 'amber_about_me',
+            'settings'   => 'amber_about_me_p',
+            'active_callback' => 'is_about_page_template',
+        ) ) );
+    
+        $wp_customize->add_setting( 'amber_about_me_p_color' , array(
+            'default'   => '#000000', // Default color
+            'transport' => 'refresh',
+        ) );
+    
+        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'amber_about_me_p_color', array(
+            'label'      => __( 'Paragraph Color', 'amber' ),
+            'section'    => 'amber_about_me',
+            'settings'   => 'amber_about_me_p_color',
+            'active_callback' => 'is_about_page_template',
+        ) ) );
+
 
 }
 
