@@ -150,16 +150,6 @@
     }
 }
 
-@media screen and (min-width: 901px) {
-    .main-navigation ul {
-        display: flex !important; 
-    }
-
-    .menu-toggle {
-        display: none; 
-    }
-}
-
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
@@ -182,6 +172,21 @@
 	}
 }
 
+
+@media screen and (min-width: 901px) {
+    .main-navigation ul {
+        display: flex !important; 
+    }
+
+    .menu-toggle {
+        display: none; 
+    }
+
+	
+}
+
+
+
 @media screen and (max-width: 600px) {
 
 	#site-navigation {
@@ -191,6 +196,11 @@
 	
 	#primary-menu {
 		align-content: center;
+
+		a {
+			padding-left: 0;
+			padding-bottom: 0.5em;
+		}
 	}
 
 	.menu-toggle {

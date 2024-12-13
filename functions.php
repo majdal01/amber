@@ -249,6 +249,7 @@ function is_gallery_page() {
 
 
 
+
 /**
  * Implement the Custom Header feature.
  */

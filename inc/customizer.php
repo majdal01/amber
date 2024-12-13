@@ -32,6 +32,7 @@ function amber_customize_register( $wp_customize ) {
 		);
 	}
 
+    
 
 
     //***********************************************************/
@@ -457,6 +458,33 @@ function amber_customize_register( $wp_customize ) {
                 'active_callback' => 'is_gallery_page',
             ) ) );
         }
+
+
+         //***********************************************************/
+        // Customizable content page about. 
+
+        // Add section for about header content
+        $wp_customize->add_section( 'amber_about_header' , array(
+            'title'      => __( 'Amber About header', 'amber' ),
+            'priority'   => 30,
+            'active_callback' => 'is_about_page',
+        ) );
+
+        // Add setting for about page header image
+        $wp_customize->add_setting( 'amber_about_header_image' , array(
+            'default'   => '', // Default image URL
+            'transport' => 'refresh',
+        ) );
+
+        // Add control for about page header image
+        $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'amber_about_header_image', array(
+            'label'      => __( 'Header Image', 'amber' ),
+            'section'    => 'amber_about_header',
+            'settings'   => 'amber_about_header_image',
+            'active_callback' => 'is_about_page',
+        ) ) );
+        
+
 
 }
 
