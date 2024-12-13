@@ -625,8 +625,61 @@ function amber_customize_register( $wp_customize ) {
         ) ) );
 
 
-}
+        //Ændring af afsnittet funfacts
 
+        // Add section for fun facts
+        $wp_customize->add_section( 'amber_funfacts' , array(
+            'title'      => __( 'Amber Fun Facts', 'amber' ),
+            'priority'   => 30,
+            'active_callback' => 'is_about_page',
+        ) );
+
+        // Add setting for fun facts heading
+        $wp_customize->add_setting( 'amber_funfacts_h2' , array(
+            'default'   => __( 'Fun facts', 'amber' ),
+            'transport' => 'refresh',
+        ) );
+
+        // Add control for fun facts heading
+        $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'amber_funfacts_h2', array(
+            'label'      => __( 'Fun Facts Heading', 'amber' ),
+            'section'    => 'amber_funfacts',
+            'settings'   => 'amber_funfacts_h2',
+            'active_callback' => 'is_about_page',
+        ) ) );
+
+        // Add setting for fun facts heading color
+        $wp_customize->add_setting( 'amber_funfacts_h2_color' , array(
+            'default'   => '#000000', // Default color
+            'transport' => 'refresh',
+        ) );
+
+        // Add control for fun facts heading color
+        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'amber_funfacts_h2_color', array(
+            'label'      => __( 'Heading Color', 'amber' ),
+            'section'    => 'amber_funfacts',
+            'settings'   => 'amber_funfacts_h2_color',
+            'active_callback' => 'is_about_page',
+        ) ) );
+
+        // Add settings and controls for each fun fact
+        for ( $i = 1; $i <= 3; $i++ ) {
+            // Fun fact setting
+            $wp_customize->add_setting( "amber_funfact_$i" , array(
+                'default'   => __( "Fun fact $i", 'amber' ),
+                'transport' => 'refresh',
+            ) );
+
+        // Fun fact control
+        $wp_customize->add_control( new WP_Customize_Control( $wp_customize, "amber_funfact_$i", array(
+            'label'      => __( "Fun Fact $i", 'amber' ),
+            'section'    => 'amber_funfacts',
+            'settings'   => "amber_funfact_$i",
+            'active_callback' => 'is_about_page',
+        ) ) );
+
+    }
+}
 
 add_action( 'customize_register', 'amber_customize_register' );
 
