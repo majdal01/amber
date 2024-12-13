@@ -948,7 +948,7 @@ textarea {
   color: #010101; /* Text color */
   padding: 20px 0; /* Padding */
   text-align: center; /* Center align text */
-  margin-top: auto;
+  margin-top: 4em;
 }
 
 .site-footer a {

@@ -50,6 +50,8 @@ get_header();
 
     </div>
 
+    <div class="line"></div>
+
 
     </main><!-- #main -->
 </div><!-- #primary -->
