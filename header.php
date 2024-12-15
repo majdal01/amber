@@ -44,7 +44,7 @@
             $amber_description = get_bloginfo( 'description', 'display' );
             if ( $amber_description || is_customize_preview() ) :
                 ?>
-                <p class="site-description"><?php echo $amber_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+                <p class="site-description"><?php bloginfo( 'description' ); ?></p>
             <?php endif; ?>
         </div><!-- .site-branding -->
 

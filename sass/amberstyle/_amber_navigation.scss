@@ -1,4 +1,4 @@
-.main-navigation {
+.site-navigation {
 	display: block;
 	width: 100%;
     
@@ -81,13 +81,13 @@
 
 /* Small menu. */
 .menu-toggle,
-.main-navigation.toggled ul {
+.site-navigation.toggled ul {
 	display: none;
 }
 
 @media screen and (max-width: 900px) {
 
-	.main-navigation button {
+	.site-navigation button {
         background-color: $color__background-screen;
         border: none;
         transition: 0.3s ease;
@@ -108,7 +108,7 @@
         margin-top: 0.5em;
     }
 
-    .main-navigation ul {
+    .site-navigation ul {
         display: none;
         flex-direction: column;
         background-color: rgba(0, 0, 0, 0.7);
@@ -124,17 +124,17 @@
 		}
     }
 
-    .main-navigation.toggled ul {
+    .site-navigation.toggled ul {
 		display: flex; /* Show menu items when toggled */
 
 	}
 
-	.main-navigation.toggled > a {
+	.site-navigation.toggled > a {
 		font-weight: 800 !important;
 		
 	}
     
-	.main-navigation.toggled ul ul {
+	.site-navigation.toggled ul ul {
         display: flex; 
         flex-direction: column;
         position: static;
@@ -174,7 +174,7 @@
 
 
 @media screen and (min-width: 901px) {
-    .main-navigation ul {
+    .site-navigation ul {
         display: flex !important; 
     }
 
@@ -208,7 +208,7 @@
 		margin: 0 auto;
 	}
 
-	.main-navigation ul {
+	.site-navigation ul {
         display: none;
         flex-direction: column;
         background-color: rgba(0, 0, 0, 0.7);
