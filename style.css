@@ -1027,13 +1027,13 @@ h2 {
   font-size: 3em;
 }
 
-p {
+p, a {
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 1.2em;
   line-height: 1.5em;
 }
 
-.site-header, .site-footer, .site-main, .site-content {
+.site-header, .site-footer, .site-main, .site-content, aside {
   margin: 0 auto;
   max-width: 1280px;
 }
@@ -1487,19 +1487,19 @@ p {
 /*--------------------------------------------------------------
 /* Amber navigation
 --------------------------------------------------------------*/
-.main-navigation {
+#site-navigation {
   display: block;
   width: 100%;
 }
-.main-navigation ul {
+#site-navigation ul {
   display: flex;
   list-style: none;
   margin: 0;
-  padding: 1em;
+  padding: 2em 1em 0 1em;
   padding-right: 2em;
   justify-content: flex-end;
 }
-.main-navigation ul ul {
+#site-navigation ul ul {
   background-color: rgba(0, 0, 0, 0.7);
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   float: left;
@@ -1508,65 +1508,65 @@ p {
   left: -999em;
   z-index: 99999;
 }
-.main-navigation ul ul ul {
+#site-navigation ul ul ul {
   left: -999em;
   top: 0;
 }
-.main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
+#site-navigation ul ul li:hover > ul, #site-navigation ul ul li.focus > ul {
   display: block;
   left: auto;
 }
-.main-navigation ul ul a {
+#site-navigation ul ul a {
   width: 110px;
   color: #fff;
 }
-.main-navigation ul ul :hover > a,
-.main-navigation ul ul .focus > a {
+#site-navigation ul ul :hover > a,
+#site-navigation ul ul .focus > a {
   text-decoration: underline;
 }
-.main-navigation ul ul a:hover,
-.main-navigation ul ul a.focus {
+#site-navigation ul ul a:hover,
+#site-navigation ul ul a.focus {
   text-decoration: underline;
 }
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
+#site-navigation ul li:hover > ul,
+#site-navigation ul li.focus > ul {
   left: auto;
 }
-.main-navigation li {
+#site-navigation li {
   position: relative;
 }
-.main-navigation li:hover > a, .main-navigation li.focus > a {
+#site-navigation li:hover > a, #site-navigation li.focus > a {
   text-decoration: underline;
 }
-.main-navigation a {
+#site-navigation a {
   display: block;
   text-decoration: none;
   padding-left: 2em;
 }
-.main-navigation .current_page_item > a,
-.main-navigation .current-menu-item > a,
-.main-navigation .current_page_ancestor > a,
-.main-navigation .current-menu-ancestor > a {
+#site-navigation .current_page_item > a,
+#site-navigation .current-menu-item > a,
+#site-navigation .current_page_ancestor > a,
+#site-navigation .current-menu-ancestor > a {
   text-decoration: underline;
 }
 
 /* Small menu. */
 .menu-toggle,
-.main-navigation.toggled ul {
+#site-navigation.toggled ul {
   display: none;
 }
 
 @media screen and (max-width: 900px) {
-  .main-navigation button {
+  #site-navigation button {
     background-color: #fff;
     border: none;
     transition: 0.3s ease;
     padding-bottom: 1.1em;
   }
-  .main-navigation button:hover {
+  #site-navigation button:hover {
     scale: 1.1;
   }
-  .main-navigation button .fa-bars {
+  #site-navigation button .fa-bars {
     font-size: 1.8em;
   }
   .menu-toggle {
@@ -1575,7 +1575,7 @@ p {
     margin-left: auto;
     margin-top: 0.5em;
   }
-  .main-navigation ul {
+  #site-navigation ul {
     display: none;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.7);
@@ -1586,16 +1586,16 @@ p {
     padding: 1em 0;
     align-items: center;
   }
-  .main-navigation ul a {
+  #site-navigation ul a {
     color: #fff;
   }
-  .main-navigation.toggled ul {
+  #site-navigation.toggled ul {
     display: flex; /* Show menu items when toggled */
   }
-  .main-navigation.toggled > a {
+  #site-navigation.toggled > a {
     font-weight: 800 !important;
   }
-  .main-navigation.toggled ul ul {
+  #site-navigation.toggled ul ul {
     display: flex;
     flex-direction: column;
     position: static;
@@ -1604,7 +1604,7 @@ p {
     padding-left: 1em;
     background-color: rgba(0, 0, 0, 0);
   }
-  .main-navigation.toggled ul ul a {
+  #site-navigation.toggled ul ul a {
     font-style: italic;
     color: #fff;
   }
@@ -1632,7 +1632,7 @@ p {
 }
 
 @media screen and (min-width: 901px) {
-  .main-navigation ul {
+  #site-navigation ul {
     display: flex !important;
   }
   .menu-toggle {
@@ -1655,7 +1655,7 @@ p {
     display: flex;
     margin: 0 auto;
   }
-  .main-navigation ul {
+  #site-navigation ul {
     display: none;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.7);

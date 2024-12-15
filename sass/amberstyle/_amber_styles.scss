@@ -12,11 +12,13 @@ html {
 
 #main {
 	min-height: 100vh;
+	
 }
 
 body {
 	background-color: white;
 	margin: 0;
+	
 }
 
 .post,
@@ -46,7 +48,7 @@ p, a {
 	line-height: 1.5em;
 }
 
-.site-header, .site-footer, .site-main, .site-content {
+.site-header, .site-footer, .site-main, .site-content, aside {
 	margin: 0 auto;
 	max-width: 1280px;
 }
