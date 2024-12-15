@@ -236,7 +236,23 @@ function amber_setup_default_pages() {
 }
 add_action( 'after_switch_theme', 'amber_setup_default_pages' );
 
+//Fjerner den sample page, som WordPress opretter som default. Denne funktion har jeg fået fra chatGPT.
 
+function amber_delete_sample_page() {
+    // Query for the Sample Page
+    $sample_page_query = new WP_Query( array(
+        'post_type'  => 'page',
+        'title'      => 'Sample Page',
+        'fields'     => 'ids', // We only need the ID to delete it
+    ) );
+
+    if ( $sample_page_query->have_posts() ) {
+        foreach ( $sample_page_query->posts as $page_id ) {
+            wp_delete_post( $page_id, true ); // Delete the page permanently
+        }
+    }
+}
+add_action( 'after_switch_theme', 'amber_delete_sample_page' );
 
 
 
