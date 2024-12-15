@@ -156,33 +156,85 @@ function amber_scripts() {
 add_action( 'wp_enqueue_scripts', 'amber_scripts' ); // Når WordPress indlæser scripts og styles, så skal den bruge funktionen amber_scripts
 
 
-//Tilføjet en side og tildeler page-gallery.php som template
+//Tilføjer mine 3 sider som default, når teamet aktiveres. Den her har jeg fået fra chatGPT. 
 
-function amber_create_gallery_page() {
-    // Check if the page already exists
-    $query = new WP_Query( array(
+function amber_setup_default_pages() {
+    // Create the front page
+    $front_page_title = 'Home';
+    $front_page_content = 'Welcome to the front page!';
+    $front_page_template = ''; // Leave empty for default template
+
+    $front_page = array(
+        'post_title'    => $front_page_title,
+        'post_content'  => $front_page_content,
+        'post_status'   => 'publish',
+        'post_type'     => 'page',
+    );
+
+    // Check if the front page already exists using WP_Query
+    $front_page_query = new WP_Query( array(
         'post_type'  => 'page',
-        'title'      => 'Gallery',
-        'post_status'=> 'publish',
+        'title'      => $front_page_title,
+        'fields'     => 'ids',
     ) );
 
-    // Check if a page with this title exists
-    if ( ! $query->have_posts() ) {
-        // Insert the page if it does not exist
-        $gallery_page_id = wp_insert_post( array(
-            'post_title'    => 'Gallery',
-            'post_type'     => 'page',
-            'post_status'   => 'publish',
-        ) );
-
-        // Assign the "Gallery" template to the page
-        update_post_meta( $gallery_page_id, '_wp_page_template', 'page-gallery.php' );
+    if ( ! $front_page_query->have_posts() ) {
+        $front_page_id = wp_insert_post( $front_page );
+        update_option( 'page_on_front', $front_page_id );
+        update_option( 'show_on_front', 'page' );
     }
 
-    // Reset post data
-    wp_reset_postdata();
+    // Create the gallery page
+    $gallery_page_title = 'Gallery';
+    $gallery_page_content = 'Welcome to the gallery page!';
+    $gallery_page_template = 'page-gallery.php'; // Template for the gallery page
+
+    $gallery_page = array(
+        'post_title'    => $gallery_page_title,
+        'post_content'  => $gallery_page_content,
+        'post_status'   => 'publish',
+        'post_type'     => 'page',
+        'page_template' => $gallery_page_template,
+    );
+
+    // Check if the gallery page already exists using WP_Query
+    $gallery_page_query = new WP_Query( array(
+        'post_type'  => 'page',
+        'title'      => $gallery_page_title,
+        'fields'     => 'ids',
+    ) );
+
+    if ( ! $gallery_page_query->have_posts() ) {
+        $gallery_page_id = wp_insert_post( $gallery_page );
+        update_post_meta( $gallery_page_id, '_wp_page_template', $gallery_page_template );
+    }
+
+    // Create the about page
+    $about_page_title = 'About';
+    $about_page_content = 'Welcome to the about page!';
+    $about_page_template = 'page-about.php'; // Template for the about page
+
+    $about_page = array(
+        'post_title'    => $about_page_title,
+        'post_content'  => $about_page_content,
+        'post_status'   => 'publish',
+        'post_type'     => 'page',
+        'page_template' => $about_page_template,
+    );
+
+    // Check if the about page already exists using WP_Query
+    $about_page_query = new WP_Query( array(
+        'post_type'  => 'page',
+        'title'      => $about_page_title,
+        'fields'     => 'ids',
+    ) );
+
+    if ( ! $about_page_query->have_posts() ) {
+        $about_page_id = wp_insert_post( $about_page );
+        update_post_meta( $about_page_id, '_wp_page_template', $about_page_template );
+    }
 }
-add_action( 'after_switch_theme', 'amber_create_gallery_page' );
+add_action( 'after_switch_theme', 'amber_setup_default_pages' );
 
 
 
