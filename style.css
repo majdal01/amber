@@ -1276,7 +1276,7 @@ p {
 }
 .about-container .about-wrapper .about-text {
   width: 70%;
-  padding: 0 2.5em;
+  padding: 0 2em;
   display: flex;
   flex-direction: column;
 }
@@ -1357,6 +1357,15 @@ p {
   .header-image-container .header-overlay h1 {
     font-size: 2.8em;
   }
+  .about-container .about-wrapper .about-box {
+    width: 40%;
+  }
+  .about-container .about-wrapper .about-box h2 {
+    padding-top: 3em;
+  }
+  .about-container .about-wrapper .about-text {
+    width: 60%;
+  }
 }
 @media screen and (max-width: 600px) {
   h1 {
@@ -1383,8 +1392,40 @@ p {
     width: 100%;
     padding-right: 0em;
   }
-  .gallery-header .gallery-header-img {
+  .gallery-header .gallery-header-img, .gallery-header .about-header-img, .about-header .gallery-header-img, .about-header .about-header-img {
     height: 300px;
+  }
+  .about-container {
+    padding-bottom: 1em;
+  }
+  .about-container .about-wrapper {
+    flex-direction: column;
+  }
+  .about-container .about-wrapper .about-box {
+    width: 90%;
+  }
+  .about-container .about-wrapper .about-text {
+    padding-top: 4em;
+    width: 100%;
+  }
+  .about-profil-wrapper {
+    flex-direction: column-reverse;
+  }
+  .about-profil-wrapper p {
+    width: 100%;
+    padding-top: 2em;
+    margin-bottom: 0;
+  }
+  .about-profil-wrapper img {
+    width: 50%;
+    align-self: center;
+  }
+  .funfacts-wrapper .funfacts-style {
+    flex-direction: column;
+    align-items: center;
+  }
+  .funfacts-wrapper .funfacts-style h3 {
+    padding: 1em 0;
   }
 }
 @media screen and (max-width: 425px) {
@@ -1414,6 +1455,12 @@ p {
     width: 100%;
     height: 100%;
   }
+  .about-container .about-wrapper .about-text {
+    padding-right: 0;
+  }
+  .about-profil-wrapper p {
+    padding-right: 0;
+  }
 }
 @media screen and (max-width: 375px) {
   .header-image-container {
@@ -1425,8 +1472,11 @@ p {
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .gallery-header .gallery-header-img {
+  .gallery-header .gallery-header-img, .gallery-header .about-header-img, .about-header .gallery-header-img, .about-header .about-header-img {
     height: 200px;
+  }
+  .about-profil-wrapper img {
+    width: 70%;
   }
 }
 /*--------------------------------------------------------------
