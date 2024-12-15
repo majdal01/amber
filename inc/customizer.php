@@ -705,6 +705,34 @@ function amber_customize_register( $wp_customize ) {
             'settings'   => "amber_funfact_color_$i",
             'active_callback' => 'is_about_page',
         ) ) );
+
+
+
+         //***********************************************************/
+        // Customizable content default page. 
+
+        // Customizable content default page. 
+
+        // Add section for default page header content
+        $wp_customize->add_section( 'amber_page_header' , array(
+            'title'      => __( 'Amber Page header', 'amber' ),
+            'priority'   => 30,
+            'active_callback' => 'is_customizer_preview_page',
+        ) );
+
+        // Add setting for default page header image
+        $wp_customize->add_setting( 'amber_page_header_image' , array(
+            'default'   => '', // Default image URL
+            'transport' => 'refresh',
+        ) );
+
+        // Add control for default page header image
+        $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'amber_page_header_image', array(
+            'label'      => __( 'Header Image', 'amber' ),
+            'section'    => 'amber_page_header',
+            'settings'   => 'amber_page_header_image',
+            'active_callback' => 'is_customizer_preview_page',
+        ) ) );
 }
 
 add_action( 'customize_register', 'amber_customize_register' );

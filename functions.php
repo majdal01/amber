@@ -259,7 +259,6 @@ function amber_delete_sample_page() {
 add_action( 'after_switch_theme', 'amber_delete_sample_page' );
 
 
-
 //Sørger for kun at vise redigeringsmuligheder der passer til den specifikke side
 
 function is_front_page_template() {
@@ -278,6 +277,14 @@ function is_about_page_template() {
     return is_page_template('page-about.php');
 }
 
+
+//Sørger for at kun vise redigeringsmuligheder der passer til den specifikke side - her en ny page
+function is_customizer_preview_page() {
+    if ( is_customize_preview() ) {
+        return is_page() && !is_front_page() && !is_page_template('page-gallery.php') && !is_page_template('page-about.php');
+    }
+    return false;
+}
 
 
 /**
