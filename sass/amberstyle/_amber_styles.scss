@@ -51,6 +51,18 @@ p {
 	max-width: 1280px;
 }
 
+.line {
+	margin: 20px 0;
+	height: 4px;
+	background:
+	  repeating-linear-gradient(90deg,#000000 0 15px,#0000 0 25px)
+  }
+
+.greenline {
+	background-color: $color__background-darkgreen;
+	height: 4em;
+}
+
 
 
 
@@ -154,12 +166,7 @@ p {
 
 	}
 }
-.line {
-	margin: 5px 0;
-	height: 4px;
-	background:
-	  repeating-linear-gradient(90deg,#000000 0 15px,#0000 0 25px)
-  }
+
 
 //***********************************************/ 
 /* Forside sektion med lille galleri */
@@ -283,7 +290,7 @@ p {
 	flex-wrap: wrap;
 	justify-content: center;
 	align-content: center;
-	padding: 6em 1em;
+	padding: 6em 1em 4em 1em;
 	gap: 1em;
 
 	img {

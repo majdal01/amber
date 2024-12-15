@@ -523,7 +523,7 @@ function amber_customize_register( $wp_customize ) {
 
         // H2
         $wp_customize->add_setting( 'amber_about_me_h2' , array(
-            'default'   => __( 'About me', 'amber' ),
+            'default'   => __( 'I love to create', 'amber' ),
             'transport' => 'refresh',
         ) );
 

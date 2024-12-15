@@ -50,8 +50,8 @@ get_header();
 
     </div>
 
-    <div class="line"></div>
 
+    <div class="greenline"></div>
 
     </main><!-- #main -->
 </div><!-- #primary -->

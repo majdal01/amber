@@ -96,6 +96,8 @@ get_header();
                 <?php echo get_theme_mod( 'amber_quote_button_text', __( 'About Me', 'amber' ) ); ?>
             </a>
         </div>
+
+        <div class="greenline"></div>
         
     </main><!-- #main -->
 </div><!-- #primary -->

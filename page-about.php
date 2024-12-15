@@ -35,7 +35,7 @@ get_header();
             </div>
 
             <section class="about-text">
-                <h2 style="color: <?php echo esc_attr( get_theme_mod( 'amber_about__me_h2_color', '#000000' ) ); ?>;"><?php echo esc_html( get_theme_mod( 'amber_about_me_h2', 'About me' ) ); ?></h2>
+                <h2 style="color: <?php echo esc_attr( get_theme_mod( 'amber_about__me_h2_color', '#000000' ) ); ?>;"><?php echo esc_html( get_theme_mod( 'amber_about_me_h2', 'I love to create' ) ); ?></h2>
                 <p style="color: <?php echo esc_attr( get_theme_mod( 'amber_about_me_p_color', '#000000' ) ); ?>;">
                 <?php echo wp_kses_post( nl2br( get_theme_mod( 'amber_about_me_p', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.' ) ) ); ?>
                 </p>
