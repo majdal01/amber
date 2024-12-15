@@ -18,7 +18,6 @@ html {
 body {
 	background-color: white;
 	margin: 0;
-	
 }
 
 .post,
@@ -270,10 +269,10 @@ p, a {
 //***********************************************/ 
 /* Galleri side */
 
-.gallery-header, .about-header {
+.gallery-header, .about-header, .page-header {
 	position: relative;
 
-	.gallery-header-img, .about-header-img {
+	.gallery-header-img, .about-header-img, .page-header-img {
 		width: 100%;
 		height: 500px;
 		object-fit: cover;
@@ -380,6 +379,15 @@ p, a {
 		padding: 2em 1em;
 	}
 }
+
+
+
+//***********************************************/ 
+/* Default page */
+
+
+
+
 
 
 
