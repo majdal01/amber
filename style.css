@@ -1398,7 +1398,7 @@ p, a {
     width: 100%;
     padding-right: 0em;
   }
-  .gallery-header .gallery-header-img, .gallery-header .about-header-img, .about-header .gallery-header-img, .about-header .about-header-img {
+  .gallery-header .gallery-header-img, .gallery-header .about-header-img, .gallery-header .page-header-img, .about-header .gallery-header-img, .about-header .about-header-img, .about-header .page-header-img, .page-header .gallery-header-img, .page-header .about-header-img, .page-header .page-header-img {
     height: 300px;
   }
   .about-container {
