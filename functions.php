@@ -169,7 +169,7 @@ function amber_setup_default_pages() {
         'post_content'  => $front_page_content,
         'post_status'   => 'publish',
         'post_type'     => 'page',
-		'menu_order'    => 0,
+		'menu_order'    => 2,
 		'page_template' => $front_page_template,
     );
 
@@ -222,7 +222,7 @@ function amber_setup_default_pages() {
         'post_content'  => $about_page_content,
         'post_status'   => 'publish',
         'post_type'     => 'page',
-		'menu_order'    => 2,
+		'menu_order'    => 0,
         'page_template' => $about_page_template,
     );
 
