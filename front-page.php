@@ -68,7 +68,7 @@ get_header();
 
             <div class="gallery">
                 <?php
-                // Define the default image URLs
+                // Default billeder
                 $default_images = array(
                     get_template_directory_uri() . '/img/default3.png',
                     get_template_directory_uri() . '/img/default1.png',

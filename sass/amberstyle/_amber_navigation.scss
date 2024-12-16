@@ -113,7 +113,7 @@
         flex-direction: column;
         background-color: rgba(0, 0, 0, 0.7);
         position: absolute;
-        width: 35%; /* Adjust width to 100% */
+        width: 35%;
         right: 0;
         z-index: 1000;
 		padding: 1em 0;
@@ -125,7 +125,7 @@
     }
 
     #site-navigation.toggled ul {
-		display: flex; /* Show menu items when toggled */
+		display: flex; 
 
 	}
 

@@ -1,4 +1,4 @@
-// Generelt styling
+// Generel styling
 
 * {
     box-sizing: border-box;
@@ -47,7 +47,7 @@ p, a {
 	line-height: 1.5em;
 }
 
-.site-header, .site-footer, .site-main, .site-content, aside {
+.site-header, .site-footer, .site-main, .site-content, aside, .content-area {
 	margin: 0 auto;
 	max-width: 1280px;
 }
@@ -61,7 +61,7 @@ p, a {
 
 .greenline {
 	background-color: $color__background-darkgreen;
-	height: 4em;
+	height: 3em;
 }
 
 
@@ -217,7 +217,7 @@ p, a {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			grid-template-rows: repeat(2, 1fr);
-			gap: 10px; /* Adjust the gap between images as needed */
+			gap: 10px; 
 			margin: 0 0 2em 4em;
 		}
 		
@@ -378,6 +378,11 @@ p, a {
 		justify-content: space-around;
 		padding: 2em 1em;
 	}
+}
+
+.edit-link {
+	text-align: center;
+	padding: 1em 0;
 }
 
 

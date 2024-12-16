@@ -274,7 +274,7 @@ function amber_customize_register( $wp_customize ) {
 
     //***********   a farve  *************/
     $wp_customize->add_setting( 'amber_small_gallery_a_color' , array(
-        'default'   => '#000000', // Default color
+        'default'   => '#000000', 
         'transport' => 'refresh',
     ) );
     
@@ -564,13 +564,13 @@ function amber_customize_register( $wp_customize ) {
         'label'      => __( 'Box Paragraph', 'amber' ),
         'section'    => 'amber_about_top',
         'settings'   => 'amber_about_top_p',
-        'type'       => 'textarea', // Change to textarea for multi-line input
+        'type'       => 'textarea', 
         'active_callback' => 'is_about_page',
     ) ) );
 
     //***********   p farve   ***********/
     $wp_customize->add_setting( 'amber_about_top_p_color' , array(
-        'default'   => '#000000', // Default color
+        'default'   => '#000000', 
         'transport' => 'refresh',
     ) );
 
@@ -623,7 +623,7 @@ function amber_customize_register( $wp_customize ) {
 
     //***********   profil img   ***********/
     $wp_customize->add_setting( 'amber_about_profil_image' , array(
-        'default'   => get_template_directory_uri() . '/img/default-profil-img.png', // Default image URL
+        'default'   => get_template_directory_uri() . '/img/default-profil-img.png', 
         'transport' => 'refresh',
     ) );
 
@@ -648,7 +648,7 @@ function amber_customize_register( $wp_customize ) {
 
     //***********   baggrundsfarve   ***********/
     $wp_customize->add_setting( 'amber_funfacts_bg_color' , array(
-        'default'   => '#4C563B', // Default color
+        'default'   => '#4C563B', 
         'transport' => 'refresh',
     ) );
 
@@ -674,7 +674,7 @@ function amber_customize_register( $wp_customize ) {
 
     //***********   h2 farve   ***********/
     $wp_customize->add_setting( 'amber_funfacts_h2_color' , array(
-        'default'   => '#ffffff', // Default color
+        'default'   => '#ffffff', 
         'transport' => 'refresh',
     ) );
 
@@ -727,7 +727,7 @@ function amber_customize_register( $wp_customize ) {
 
     //***********   header img   ***********/
     $wp_customize->add_setting( 'amber_page_header_image' , array(
-        'default'   => '', // Default image URL
+        'default'   => '', 
         'transport' => 'refresh',
     ) );
 

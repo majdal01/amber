@@ -66,9 +66,10 @@
             );
             ?>
         </nav><!-- #site-navigation -->
-
+        
+    </header><!-- #masthead -->
        
 </div>
       
 
-    </header><!-- #masthead -->
+    
