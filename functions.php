@@ -156,7 +156,7 @@ function amber_scripts() {
 add_action( 'wp_enqueue_scripts', 'amber_scripts' ); // Når WordPress indlæser scripts og styles, så skal den bruge funktionen amber_scripts
 
 
-//Tilføjer mine 3 sider som default, når teamet aktiveres. Den her har jeg fået fra chatGPT. 
+//Tilføjer mine 3 sider som default, når teamet aktiveres. Den her har jeg fået fra ChatGPT. 
 
 function amber_setup_default_pages() {
     // Create the front page
@@ -169,7 +169,7 @@ function amber_setup_default_pages() {
         'post_content'  => $front_page_content,
         'post_status'   => 'publish',
         'post_type'     => 'page',
-		'menu_order'    => 2,
+		'menu_order'    => 0,
 		'page_template' => $front_page_template,
     );
 
@@ -222,7 +222,7 @@ function amber_setup_default_pages() {
         'post_content'  => $about_page_content,
         'post_status'   => 'publish',
         'post_type'     => 'page',
-		'menu_order'    => 0,
+		'menu_order'    => 2,
         'page_template' => $about_page_template,
     );
 
@@ -239,6 +239,7 @@ function amber_setup_default_pages() {
     }
 }
 add_action( 'after_switch_theme', 'amber_setup_default_pages' );
+
 
 //Fjerner den sample page, som WordPress opretter som default. Denne funktion har jeg fået fra chatGPT.
 
@@ -275,7 +276,7 @@ function is_about_page() {
 
 
 
-//Sørger for at kun vise redigeringsmuligheder der passer til den specifikke side - her en ny page
+//Sørger for at kun vise redigeringsmuligheder der passer til når en ny page oprettes
 function is_customizer_preview_page() {
     if ( is_customize_preview() ) {
         return is_page() && !is_front_page() && !is_page_template('page-gallery.php') && !is_page_template('page-about.php');
