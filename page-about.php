@@ -26,18 +26,18 @@ get_header();
     <div class="line"></div>
 
     
-    <div class="about-container" style="background-color: <?php echo esc_attr( get_theme_mod( 'amber_about_container_bg_color', '#ffffff' ) ); ?>;">
+    <div class="about-container">
 
         <div class="about-wrapper">
 
-            <div class="about-box" style="background-color: <?php echo esc_attr( get_theme_mod( 'amber_about_color', '#F0D8BE' ) ); ?>;">
-                <h2 style="color: <?php echo esc_attr( get_theme_mod( 'amber_about_h2_color', '#000000' ) ); ?>;"><?php echo esc_html( get_theme_mod( 'amber_about_h2', 'About me' ) ); ?></h2>
+            <div class="about-box" style="background-color: <?php echo esc_attr( get_theme_mod( 'amber_about_me_box_color', '#F0D8BE' ) ); ?>;">
+                <h2 style="color: <?php echo esc_attr( get_theme_mod( 'amber_about_me_box_h2_color', '#000000' ) ); ?>;"><?php echo esc_html( get_theme_mod( 'amber_about_me_box_h2', 'About me' ) ); ?></h2>
             </div>
 
             <section class="about-text">
-                <h2 style="color: <?php echo esc_attr( get_theme_mod( 'amber_about__me_h2_color', '#000000' ) ); ?>;"><?php echo esc_html( get_theme_mod( 'amber_about_me_h2', 'I love to create' ) ); ?></h2>
-                <p style="color: <?php echo esc_attr( get_theme_mod( 'amber_about_me_p_color', '#000000' ) ); ?>;">
-                <?php echo wp_kses_post( nl2br( get_theme_mod( 'amber_about_me_p', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.' ) ) ); ?>
+                <h2 style="color: <?php echo esc_attr( get_theme_mod( 'amber_about_top_h2_color', '#000000' ) ); ?>;"><?php echo esc_html( get_theme_mod( 'amber_about_top_h2', 'I love to create' ) ); ?></h2>
+                <p style="color: <?php echo esc_attr( get_theme_mod( 'amber_about_top_p_color', '#000000' ) ); ?>;">
+                <?php echo wp_kses_post( nl2br( get_theme_mod( 'amber_about_top_p', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.' ) ) ); ?>
                 </p>
             </section>
 
@@ -58,13 +58,13 @@ get_header();
     </section>
 
 
-    <section class="funfacts-wrapper">
+    <section class="funfacts-wrapper" style="background-color: <?php echo esc_attr( get_theme_mod( 'amber_funfacts_bg_color', '#4C563B' ) ); ?>;">
         <h2 style="color: <?php echo esc_attr( get_theme_mod( 'amber_funfacts_h2_color', '#fff' ) ); ?>;"><?php echo esc_html( get_theme_mod( 'amber_funfacts_h2', 'Fun facts' ) ); ?></h2>
         
         <div class="funfacts-style">
 
             <?php for ( $i = 1; $i <= 3; $i++ ) : ?>
-                <h3><?php echo esc_html( get_theme_mod( "amber_funfact_$i", "Fun fact $i" ) ); ?></h3>
+                <h3 style="color: <?php echo esc_attr( get_theme_mod( "amber_funfact_color_$i", '#fff' ) ); ?>;"><?php echo esc_html( get_theme_mod( "amber_funfact_$i", "Fun fact $i" ) ); ?></h3>
             <?php endfor; ?>
 
         </div>

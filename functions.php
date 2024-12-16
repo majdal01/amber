@@ -273,9 +273,6 @@ function is_about_page() {
     return is_page_template('page-about.php');
 }
 
-function is_about_page_template() {
-    return is_page_template('page-about.php');
-}
 
 
 //Sørger for at kun vise redigeringsmuligheder der passer til den specifikke side - her en ny page

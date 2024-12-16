@@ -40,7 +40,7 @@ function amber_customize_register( $wp_customize ) {
     //***********************************************************/
 
     $wp_customize->add_section( 'amber_header_content' , array(
-        'title'      => __( 'Amber Header Content', 'amber' ),
+        'title'      => __( 'Amber Header text and button', 'amber' ),
         'priority'   => 30,
     ) );
 
@@ -324,7 +324,7 @@ function amber_customize_register( $wp_customize ) {
     //***********************************************************/
 
     $wp_customize->add_section( 'amber_quote_content' , array(
-        'title'      => __( 'Amber Quote Content', 'amber' ),
+        'title'      => __( 'Amber Quote text and button', 'amber' ),
         'priority'   => 30,
     ) );
 
@@ -387,7 +387,7 @@ function amber_customize_register( $wp_customize ) {
     //***********************************************************/
 
     $wp_customize->add_section( 'amber_gallery_header' , array(
-        'title'      => __( 'Amber Gallery header', 'amber' ),
+        'title'      => __( 'Amber Gallery header image', 'amber' ),
         'priority'   => 30,
         'active_callback' => 'is_gallery_page',
     ) );
@@ -449,8 +449,8 @@ function amber_customize_register( $wp_customize ) {
     //***********************************************************/
 
     $wp_customize->add_section( 'amber_about_header' , array(
-        'title'      => __( 'Amber About Header', 'amber' ),
-        'priority'   => 30,
+        'title'      => __( 'Amber About Header image', 'amber' ),
+        'priority'   => 13,
         'active_callback' => 'is_about_page',
     ) );
 
@@ -473,88 +473,111 @@ function amber_customize_register( $wp_customize ) {
 	// Redigeringsmuligheder til siden page-about.php
     //***********************************************************/
 
-    $wp_customize->add_section( 'amber_about_me' , array(
-        'title'      => __( 'Amber About Me', 'amber' ),
-        'priority'   => 30,
+    $wp_customize->add_section( 'amber_about_me_box' , array(
+        'title'      => __( 'Amber About Me box', 'amber' ),
+        'priority'   => 23,
         'active_callback' => 'is_about_page',
     ) );
 
-    //***********   baggrundsfarve   ***********/
-    $wp_customize->add_setting( 'amber_about_me_bg_color' , array(
-        'default'   => '#ffffff', // Default color
+    //***********   baggrundsfarve på textboksen   ***********/
+    $wp_customize->add_setting( 'amber_about_me_box_color' , array(
+        'default'   => '#F0D8BE', 
         'transport' => 'refresh',
     ) );
-
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'amber_about_me_bg_color', array(
-        'label'      => __( 'Container Background Color', 'amber' ),
-        'section'    => 'amber_about_me',
-        'settings'   => 'amber_about_me_bg_color',
-        'active_callback' => 'is_about_page',
-    ) ) );
-
-    //***********   baggrundsfarve   ***********/
-    $wp_customize->add_setting( 'amber_about_me_color' , array(
-        'default'   => '#F0D8BE', // Default color
-        'transport' => 'refresh',
-    ) );
-
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'amber_about_me_color', array(
+    
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'amber_about_me_box_color', array(
         'label'      => __( 'Box Background Color', 'amber' ),
-        'section'    => 'amber_about_me',
-        'settings'   => 'amber_about_me_color',
+        'section'    => 'amber_about_me_box',
+        'settings'   => 'amber_about_me_box_color',
         'active_callback' => 'is_about_page',
     ) ) );
+        
+    //***********   h2 i boxen   *************/
+    $wp_customize->add_setting( 'amber_about_me_box_h2' , array(
+        'default'   => __( 'About me', 'amber' ),
+        'transport' => 'refresh',
+    ) );
+    
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'amber_about_me_box_h2', array(
+        'label'      => __( 'Box Heading', 'amber' ),
+        'section'    => 'amber_about_me_box',
+        'settings'   => 'amber_about_me_box_h2',
+        'active_callback' => 'is_about_page',
+    ) ) );
+
+    //***********   h2 i boxen farve  *************/
+    $wp_customize->add_setting( 'amber_about_me_box_h2_color' , array(
+        'default'   => '#000000', 
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'amber_about_me_box_h2_color', array(
+        'label'      => __( 'Heading Color', 'amber' ),
+        'section'    => 'amber_about_me_box',
+        'settings'   => 'amber_about_me_box_h2_color',
+        'active_callback' => 'is_about_page',
+    ) ) );
+
+    //***********************************************************/
+	// Redigeringsmuligheder til overste afsnit page-about.php
+    //***********************************************************/
+
+    $wp_customize->add_section( 'amber_about_top' , array(
+        'title'      => __( 'Amber About Me top text', 'amber' ),
+        'priority'   => 33,
+        'active_callback' => 'is_about_page',
+    ) );
 
     //***********   h2   ***********/
-    $wp_customize->add_setting( 'amber_about_me_h2' , array(
+    $wp_customize->add_setting( 'amber_about_top_h2' , array(
         'default'   => __( 'I love to create', 'amber' ),
         'transport' => 'refresh',
     ) );
 
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'amber_about_me_h2', array(
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'amber_about_top_h2', array(
         'label'      => __( 'Box Heading', 'amber' ),
-        'section'    => 'amber_about_me',
-        'settings'   => 'amber_about_me_h2',
+        'section'    => 'amber_about_top',
+        'settings'   => 'amber_about_top_h2',
         'active_callback' => 'is_about_page',
     ) ) );
 
     //***********   h2 farve   ***********/
-    $wp_customize->add_setting( 'amber_about_me_h2_color' , array(
-        'default'   => '#000000', // Default color
+    $wp_customize->add_setting( 'amber_about_top_h2_color' , array(
+        'default'   => '#000000', 
         'transport' => 'refresh',
     ) );
 
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'amber_about_me_h2_color', array(
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'amber_about_top_h2_color', array(
         'label'      => __( 'Heading Color', 'amber' ),
-        'section'    => 'amber_about_me',
-        'settings'   => 'amber_about_me_h2_color',
+        'section'    => 'amber_about_top',
+        'settings'   => 'amber_about_top_h2_color',
         'active_callback' => 'is_about_page',
     ) ) );
 
     //***********   p   ***********/
-    $wp_customize->add_setting( 'amber_about_me_p' , array(
+    $wp_customize->add_setting( 'amber_about_top_p' , array(
         'default'   => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'amber' ),
         'transport' => 'refresh',
     ) );
 
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'amber_about_me_p', array(
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'amber_about_top_p', array(
         'label'      => __( 'Box Paragraph', 'amber' ),
-        'section'    => 'amber_about_me',
-        'settings'   => 'amber_about_me_p',
+        'section'    => 'amber_about_top',
+        'settings'   => 'amber_about_top_p',
         'type'       => 'textarea', // Change to textarea for multi-line input
         'active_callback' => 'is_about_page',
     ) ) );
 
     //***********   p farve   ***********/
-    $wp_customize->add_setting( 'amber_about_me_p_color' , array(
+    $wp_customize->add_setting( 'amber_about_top_p_color' , array(
         'default'   => '#000000', // Default color
         'transport' => 'refresh',
     ) );
 
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'amber_about_me_p_color', array(
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'amber_about_top_p_color', array(
         'label'      => __( 'Paragraph Color', 'amber' ),
-        'section'    => 'amber_about_me',
-        'settings'   => 'amber_about_me_p_color',
+        'section'    => 'amber_about_top',
+        'settings'   => 'amber_about_top_p_color',
         'active_callback' => 'is_about_page',
     ) ) );
 
@@ -566,7 +589,7 @@ function amber_customize_register( $wp_customize ) {
 
     $wp_customize->add_section( 'amber_about_profil' , array(
         'title'      => __( 'Amber Profil image and text', 'amber' ),
-        'priority'   => 30,
+        'priority'   => 43,
         'active_callback' => 'is_about_page',
     ) );
 
@@ -619,7 +642,7 @@ function amber_customize_register( $wp_customize ) {
 
     $wp_customize->add_section( 'amber_funfacts' , array(
         'title'      => __( 'Amber Fun Facts', 'amber' ),
-        'priority'   => 30,
+        'priority'   => 53,
         'active_callback' => 'is_about_page',
     ) );
 
@@ -630,7 +653,7 @@ function amber_customize_register( $wp_customize ) {
     ) );
 
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'amber_funfacts_bg_color', array(
-        'label'      => __( 'Container Background Color', 'amber' ),
+        'label'      => __( 'Funfacts Background Color', 'amber' ),
         'section'    => 'amber_funfacts',
         'settings'   => 'amber_funfacts_bg_color',
         'active_callback' => 'is_about_page',
@@ -675,20 +698,20 @@ function amber_customize_register( $wp_customize ) {
             'settings'   => "amber_funfact_$i",
             'active_callback' => 'is_about_page',
         ) ) );
+
+        //***********   funfacts farve   ***********/
+        $wp_customize->add_setting( "amber_funfact_color_$i" , array(
+            'default'   => '#ffffff', 
+            'transport' => 'refresh',
+        ) );
+
+        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, "amber_funfact_color_$i", array(
+            'label'      => __( "Fun Fact Color $i", 'amber' ),
+            'section'    => 'amber_funfacts',
+            'settings'   => "amber_funfact_color_$i",
+            'active_callback' => 'is_about_page',
+        ) ) );
     }
-
-    //***********   funfacts farve   ***********/
-    $wp_customize->add_setting( "amber_funfact_color_$i" , array(
-        'default'   => '#ffffff', // Default color
-        'transport' => 'refresh',
-    ) );
-
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, "amber_funfact_color_$i", array(
-        'label'      => __( "Fun Fact Color $i", 'amber' ),
-        'section'    => 'amber_funfacts',
-        'settings'   => "amber_funfact_color_$i",
-        'active_callback' => 'is_about_page',
-    ) ) );
 
 
 
