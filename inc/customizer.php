@@ -104,7 +104,7 @@ function amber_customize_register( $wp_customize ) {
     
     $wp_customize->add_section( 'amber_front_page_icons' , array(
         'title'      => __( 'Amber icons and text', 'amber' ),
-        'priority'   => 30,
+        'priority'   => 31,
     ) );
 
     //***********   ikoner   ***********/
@@ -163,7 +163,7 @@ function amber_customize_register( $wp_customize ) {
 
     $wp_customize->add_section( 'amber_small_gallery' , array(
         'title'      => __( 'Amber Small Gallery layout', 'amber' ),
-        'priority'   => 30,
+        'priority'   => 32,
     ) );
 
     //***********   farve på baggrunden   ***********/
@@ -293,7 +293,7 @@ function amber_customize_register( $wp_customize ) {
 
     $wp_customize->add_section( 'amber_gallery' , array(
         'title'      => __( 'Amber Small Gallery images', 'amber' ),
-        'priority'   => 30,
+        'priority'   => 33,
     ) );
 
     $default_images = array(
@@ -325,7 +325,7 @@ function amber_customize_register( $wp_customize ) {
 
     $wp_customize->add_section( 'amber_quote_content' , array(
         'title'      => __( 'Amber Quote text and button', 'amber' ),
-        'priority'   => 30,
+        'priority'   => 34,
     ) );
 
     //***********   h2  *************/
@@ -413,7 +413,7 @@ function amber_customize_register( $wp_customize ) {
 
     $wp_customize->add_section( 'amber_large_gallery' , array(
         'title'      => __( 'Amber Large Gallery images', 'amber' ),
-        'priority'   => 30,
+        'priority'   => 31,
         'active_callback' => 'is_gallery_page',
     ) );
 
@@ -450,7 +450,7 @@ function amber_customize_register( $wp_customize ) {
 
     $wp_customize->add_section( 'amber_about_header' , array(
         'title'      => __( 'Amber About Header image', 'amber' ),
-        'priority'   => 13,
+        'priority'   => 30,
         'active_callback' => 'is_about_page',
     ) );
 
@@ -475,7 +475,7 @@ function amber_customize_register( $wp_customize ) {
 
     $wp_customize->add_section( 'amber_about_me_box' , array(
         'title'      => __( 'Amber About Me box', 'amber' ),
-        'priority'   => 23,
+        'priority'   => 31,
         'active_callback' => 'is_about_page',
     ) );
 
@@ -524,7 +524,7 @@ function amber_customize_register( $wp_customize ) {
 
     $wp_customize->add_section( 'amber_about_top' , array(
         'title'      => __( 'Amber About Me top text', 'amber' ),
-        'priority'   => 33,
+        'priority'   => 32,
         'active_callback' => 'is_about_page',
     ) );
 
@@ -589,7 +589,7 @@ function amber_customize_register( $wp_customize ) {
 
     $wp_customize->add_section( 'amber_about_profil' , array(
         'title'      => __( 'Amber Profil image and text', 'amber' ),
-        'priority'   => 43,
+        'priority'   => 33,
         'active_callback' => 'is_about_page',
     ) );
 
@@ -642,7 +642,7 @@ function amber_customize_register( $wp_customize ) {
 
     $wp_customize->add_section( 'amber_funfacts' , array(
         'title'      => __( 'Amber Fun Facts', 'amber' ),
-        'priority'   => 53,
+        'priority'   => 34,
         'active_callback' => 'is_about_page',
     ) );
 
