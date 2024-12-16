@@ -12,6 +12,7 @@ get_header();
     <main id="main" class="site-main">
 
         <header class="gallery-header">
+            
             <div class="gallery-header-img">
                 <?php 
                 $header_image = get_theme_mod( 'amber_gallery_header_image' );
@@ -21,6 +22,7 @@ get_header();
                     <img src="<?php echo esc_url( get_template_directory_uri() . '/img/default-gallery-header.png' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
                 <?php endif; ?>
             </div>
+
             <h1 class="page-title"><?php echo esc_html( get_theme_mod( 'amber_gallery_page_title', __( 'Gallery', 'amber' ) ) ); ?></h1>
         </header>
 
