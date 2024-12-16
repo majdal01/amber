@@ -46,7 +46,7 @@ function amber_customize_register( $wp_customize ) {
 
     //***********   h1   ***********/
     $wp_customize->add_setting( 'amber_header_h1' , array(
-        'default'   => __( 'Welcome to My Site', 'amber' ),
+        'default'   => __( 'Welcome to Your Site', 'amber' ),
         'transport' => 'refresh',
     ) );
 
@@ -59,7 +59,7 @@ function amber_customize_register( $wp_customize ) {
 
     //***********   p   ***********/
     $wp_customize->add_setting( 'amber_header_p' , array(
-        'default'   => __( 'This is a customizable paragraph.', 'amber' ),
+        'default'   => __( 'Edit the theme elements with customise in the top menu.', 'amber' ),
         'transport' => 'refresh',
     ) );
 

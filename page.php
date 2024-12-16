@@ -34,11 +34,17 @@ get_header();
         <div class="line"></div>
         
         <?php
-            while ( have_posts() ) : 
-                the_post();
-                the_content(); 
-                edit_post_link( __( 'Feel free to edit this section with Wordpress. Click the text to begin', 'amber' ), '<p class="edit-link">', '</p>' );
-            endwhile;
+        while ( have_posts() ) : 
+            the_post();
+            the_content(); 
+
+            // ChatGPT hjalp mig her, så teksten også er synlig, selvom man arbejder med customizeren
+            if ( current_user_can( 'edit_post', get_the_ID() ) || is_customize_preview() ) {
+                echo '<p class="edit-link"><a href="' . get_edit_post_link( get_the_ID() ) . '">' . 
+                    __( 'Feel free to edit this section with WordPress. Close the customizer, return to your site and click the text to begin', 'amber' ) . 
+                    '</a></p>';
+            }
+        endwhile;
         ?>
 
     
