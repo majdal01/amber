@@ -54,26 +54,11 @@ get_header();
         <div class="line"></div>
 
         <?php
-            while ( have_posts() ) : 
-                the_post();
-
-                //Fik hjælp af ChatGPT til at få den her til at fungere. Default tekst når der ikke er indhold, som forsvinder, når der laves indhold
-                
-                // Get the content of the post
-                $content = get_the_content();
-
-                // If content is empty (i.e., still the default text), show the default text
-                if ( empty($content) ) {
-                    echo '<p class="edit-link">' . 
-                        '<a href="' . get_edit_post_link( get_the_ID() ) . '">' . 
-                        __( 'Feel free to edit this section with WordPress. Click the text to begin editing or click edit in the top menu.', 'amber' ) . 
-                        '</a></p>';
-                } else {
-                    // Otherwise, show the actual content
-                    the_content();
-                }
-
-            endwhile;
+        // Start the loop
+        while ( have_posts() ) :
+            the_post();
+            the_content();
+        endwhile; // End of the loop.
         ?>
 
         <div class="greenline"></div>
