@@ -18,7 +18,7 @@ get_header();
             if ( $header_image ) : ?>
                 <img src="<?php echo esc_url( $header_image ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
             <?php else : ?>
-                <img src="<?php echo esc_url( get_template_directory_uri() . '/img/default-gallery-header.jpg' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+                <img src="<?php echo esc_url( get_template_directory_uri() . '/img/default-gallery-header.png' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
             <?php endif; ?>
         </div>
         <h1 class="page-title"><?php echo esc_html( get_theme_mod( 'amber_gallery_page_title', __( 'Gallery', 'amber' ) ) ); ?></h1>
@@ -32,14 +32,14 @@ get_header();
         <?php
         // Define the default image URLs
         $default_images = array(
-            get_template_directory_uri() . '/img/default3.jpg',
+            get_template_directory_uri() . '/img/default3.png',
             get_template_directory_uri() . '/img/default1.png',
             get_template_directory_uri() . '/img/default4.png', 
-            get_template_directory_uri() . '/img/default5.jpg',
-            get_template_directory_uri() . '/img/default2.jpg',
-            get_template_directory_uri() . '/img/default6.jpg',
-            get_template_directory_uri() . '/img/default7.jpg',
-            get_template_directory_uri() . '/img/default8.jpg'
+            get_template_directory_uri() . '/img/default5.png',
+            get_template_directory_uri() . '/img/default2.png',
+            get_template_directory_uri() . '/img/default6.png',
+            get_template_directory_uri() . '/img/default7.png',
+            get_template_directory_uri() . '/img/default8.png'
         );
 
         for ( $i = 1; $i <= 8; $i++ ) : ?>

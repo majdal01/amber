@@ -70,9 +70,9 @@ get_header();
                 <?php
                 // Define the default image URLs
                 $default_images = array(
-                    get_template_directory_uri() . '/img/default3.jpg',
+                    get_template_directory_uri() . '/img/default3.png',
                     get_template_directory_uri() . '/img/default1.png',
-                    get_template_directory_uri() . '/img/default2.jpg',
+                    get_template_directory_uri() . '/img/default2.png',
                     get_template_directory_uri() . '/img/default4.png'
                 );
 

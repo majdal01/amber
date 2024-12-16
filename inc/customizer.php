@@ -297,9 +297,9 @@ function amber_customize_register( $wp_customize ) {
 
         // Define the default image URLs
         $default_images = array(
-            get_template_directory_uri() . '/img/default3.jpg',
+            get_template_directory_uri() . '/img/default3.png',
             get_template_directory_uri() . '/img/default1.png',
-            get_template_directory_uri() . '/img/default2.jpg',
+            get_template_directory_uri() . '/img/default2.png',
             get_template_directory_uri() . '/img/default4.png'
         );
 
@@ -433,14 +433,14 @@ function amber_customize_register( $wp_customize ) {
 
         // Define the default image URLs
         $default_images = array(
-            get_template_directory_uri() . '/img/default3.jpg',
+            get_template_directory_uri() . '/img/default3.png',
             get_template_directory_uri() . '/img/default1.png',
             get_template_directory_uri() . '/img/default4.png',
-            get_template_directory_uri() . '/img/default5.jpg',
-            get_template_directory_uri() . '/img/default2.jpg',
-            get_template_directory_uri() . '/img/default6.jpg',
-            get_template_directory_uri() . '/img/default7.jpg',
-            get_template_directory_uri() . '/img/default8.jpg'
+            get_template_directory_uri() . '/img/default5.png',
+            get_template_directory_uri() . '/img/default2.png',
+            get_template_directory_uri() . '/img/default6.png',
+            get_template_directory_uri() . '/img/default7.png',
+            get_template_directory_uri() . '/img/default8.png'
         );
 
             // Add settings and controls for each gallery image
