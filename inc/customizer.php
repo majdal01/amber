@@ -387,7 +387,7 @@ function amber_customize_register( $wp_customize ) {
     //***********************************************************/
 
     $wp_customize->add_section( 'amber_gallery_header' , array(
-        'title'      => __( 'Amber Gallery header image', 'amber' ),
+        'title'      => __( 'Amber Gallery header image and title', 'amber' ),
         'priority'   => 30,
         'active_callback' => 'is_gallery_page',
     ) );
@@ -402,6 +402,19 @@ function amber_customize_register( $wp_customize ) {
         'label'      => __( 'Header Image', 'amber' ),
         'section'    => 'amber_gallery_header',
         'settings'   => 'amber_gallery_header_image',
+        'active_callback' => 'is_gallery_page',
+    ) ) );
+
+    //***********   h1   ***********/
+    $wp_customize->add_setting( 'amber_gallery_page_title' , array(
+        'default'   => __( 'Gallery', 'amber' ),
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'amber_gallery_page_title', array(
+        'label'      => __( 'Header H1', 'amber' ),
+        'section'    => 'amber_gallery_header',
+        'settings'   => 'amber_gallery_page_title',
         'active_callback' => 'is_gallery_page',
     ) ) );
     
@@ -449,7 +462,7 @@ function amber_customize_register( $wp_customize ) {
     //***********************************************************/
 
     $wp_customize->add_section( 'amber_about_header' , array(
-        'title'      => __( 'Amber About Header image', 'amber' ),
+        'title'      => __( 'Amber About Header image and title', 'amber' ),
         'priority'   => 30,
         'active_callback' => 'is_about_page',
     ) );
@@ -464,6 +477,19 @@ function amber_customize_register( $wp_customize ) {
         'label'      => __( 'Header Image', 'amber' ),
         'section'    => 'amber_about_header',
         'settings'   => 'amber_about_header_image',
+        'active_callback' => 'is_about_page',
+    ) ) );
+
+    //***********   h1   ***********/
+    $wp_customize->add_setting( 'amber_about_page_title' , array(
+        'default'   => __( 'About', 'amber' ),
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'amber_about_page_title', array(
+        'label'      => __( 'Header H1', 'amber' ),
+        'section'    => 'amber_about_header',
+        'settings'   => 'amber_about_page_title',
         'active_callback' => 'is_about_page',
     ) ) );
 
@@ -720,7 +746,7 @@ function amber_customize_register( $wp_customize ) {
     //***********************************************************/ 
 
     $wp_customize->add_section( 'amber_page_header' , array(
-        'title'      => __( 'Amber Page header', 'amber' ),
+        'title'      => __( 'Amber Page header image and title', 'amber' ),
         'priority'   => 30,
         'active_callback' => 'is_customizer_preview_page',
     ) );
@@ -735,6 +761,19 @@ function amber_customize_register( $wp_customize ) {
         'label'      => __( 'Header Image', 'amber' ),
         'section'    => 'amber_page_header',
         'settings'   => 'amber_page_header_image',
+        'active_callback' => 'is_customizer_preview_page',
+    ) ) );
+
+    //***********   h1   ***********/
+    $wp_customize->add_setting( 'amber__page_title' , array(
+        'default'   => __( 'Customize your page', 'amber' ),
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'amber__page_title', array(
+        'label'      => __( 'Header H1', 'amber' ),
+        'section'    => 'amber_page_header',
+        'settings'   => 'amber__page_title',
         'active_callback' => 'is_customizer_preview_page',
     ) ) );
 }
