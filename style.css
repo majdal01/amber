@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: Amber
 Theme URI: https://amberowldesign.dk/amber
@@ -1569,11 +1570,12 @@ p, a {
     transition: 0.3s ease;
     padding-bottom: 1.1em;
   }
-  #site-navigation button:hover {
+  ß #site-navigation button:hover {
     scale: 1.1;
   }
   #site-navigation button .fa-bars {
     font-size: 1.8em;
+    padding-top: 0.7em;
   }
   .menu-toggle {
     display: block;
@@ -1594,6 +1596,7 @@ p, a {
   }
   #site-navigation ul a {
     color: #fff;
+    padding-bottom: 1em;
   }
   #site-navigation.toggled ul {
     display: flex;
@@ -1649,6 +1652,9 @@ p, a {
   #site-navigation {
     display: flex;
     flex-direction: column;
+  }
+  #site-navigation button .fa-bars {
+    padding-top: 0em;
   }
   #primary-menu {
     align-content: center;
